@@ -20,35 +20,28 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
+    handleScroll(); // set correct state on mount
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navTextColor = scrolled ? '#1A2E4A' : '#ffffff';
-  const hamColor = scrolled ? '#1A2E4A' : '#ffffff';
-
   return (
     <>
-      <motion.header
-        className="fixed top-0 left-0 right-0 z-50 h-16 md:h-20"
-        animate={{
-          backgroundColor: scrolled ? '#ffffff' : 'rgba(0,0,0,0)',
-          boxShadow: scrolled
-            ? '0 4px 6px -1px rgb(0 0 0 / 0.10), 0 2px 4px -2px rgb(0 0 0 / 0.10)'
-            : 'none',
-        }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 h-16 md:h-20 transition-all duration-300 ${
+          scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex flex-col leading-none select-none">
-            <motion.span
-              className="font-black text-2xl tracking-tight"
-              animate={{ color: navTextColor }}
-              transition={{ duration: 0.3 }}
+            <span
+              className={`font-black text-2xl tracking-tight transition-colors duration-300 ${
+                scrolled ? 'text-primary' : 'text-white'
+              }`}
             >
               DIEFFE
-            </motion.span>
+            </span>
             <span className="text-sm font-medium text-accent">Ristrutturazioni</span>
           </Link>
 
@@ -57,13 +50,16 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
-                <Link key={link.href} href={link.href} className="relative py-1 text-sm font-medium">
-                  <motion.span
-                    animate={{ color: navTextColor }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {link.label}
-                  </motion.span>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative py-1 text-sm font-medium transition-colors duration-300 ${
+                    scrolled
+                      ? 'text-primary hover:text-accent'
+                      : 'text-white hover:text-accent'
+                  }`}
+                >
+                  {link.label}
                   {isActive && (
                     <motion.span
                       layoutId="nav-active-underline"
@@ -93,37 +89,25 @@ export default function Navbar() {
               aria-label={menuOpen ? 'Chiudi menu' : 'Apri menu'}
               aria-expanded={menuOpen}
             >
-              <motion.span
-                className="block h-0.5 w-6 rounded-full origin-center"
-                animate={{
-                  rotate: menuOpen ? 45 : 0,
-                  y: menuOpen ? 8 : 0,
-                  backgroundColor: hamColor,
-                }}
-                transition={{ duration: 0.25 }}
+              <span
+                className={`block h-0.5 w-6 rounded-full origin-center transition-all duration-300 ${
+                  scrolled ? 'bg-primary' : 'bg-white'
+                } ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
               />
-              <motion.span
-                className="block h-0.5 w-6 rounded-full origin-center"
-                animate={{
-                  opacity: menuOpen ? 0 : 1,
-                  scaleX: menuOpen ? 0 : 1,
-                  backgroundColor: hamColor,
-                }}
-                transition={{ duration: 0.2 }}
+              <span
+                className={`block h-0.5 w-6 rounded-full origin-center transition-all duration-200 ${
+                  scrolled ? 'bg-primary' : 'bg-white'
+                } ${menuOpen ? 'opacity-0 scale-x-0' : ''}`}
               />
-              <motion.span
-                className="block h-0.5 w-6 rounded-full origin-center"
-                animate={{
-                  rotate: menuOpen ? -45 : 0,
-                  y: menuOpen ? -8 : 0,
-                  backgroundColor: hamColor,
-                }}
-                transition={{ duration: 0.25 }}
+              <span
+                className={`block h-0.5 w-6 rounded-full origin-center transition-all duration-300 ${
+                  scrolled ? 'bg-primary' : 'bg-white'
+                } ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
               />
             </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile drawer + overlay */}
       <AnimatePresence>
