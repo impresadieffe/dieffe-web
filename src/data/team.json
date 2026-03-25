@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Franco Ferraris",
+    "role": "Titolare & Responsabile Lavori",
+    "bio": "Con oltre 20 anni di esperienza nel settore edile, Franco ha fondato Dieffe Ristrutturazioni con l'obiettivo di offrire un servizio di qualità superiore nel territorio piemontese. Supervisiona personalmente ogni cantiere, garantendo il rispetto dei tempi e degli standard qualitativi più elevati.",
+    "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Massimo Conti",
+    "role": "Capo Cantiere",
+    "bio": "Massimo coordina le squadre operative sul campo con competenza e precisione. La sua esperienza ventennale nelle ristrutturazioni civili e commerciali lo rende il punto di riferimento tecnico per ogni intervento, dalla demolizione alle finiture finali.",
+    "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Elena Marchetti",
+    "role": "Responsabile Commerciale",
+    "bio": "Elena è il primo contatto per clienti e architetti, gestendo preventivi, contratti e relazioni commerciali. Grazie alla sua formazione tecnica e alla passione per il design d'interni, supporta i clienti nella scelta dei materiali e delle soluzioni più adatte alle loro esigenze.",
+    "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80"
+  }
+]

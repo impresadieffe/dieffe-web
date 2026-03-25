@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Bagno moderno in marmo bianco",
+    "category": "Bagni",
+    "imageUrl": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    "description": "Ristrutturazione completa di un bagno padronale con rivestimenti in marmo bianco Carrara, box doccia walk-in e sanitari sospesi.",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Cucina open space in stile industriale",
+    "category": "Cucine",
+    "imageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    "description": "Realizzazione di una cucina open space con top in pietra grigia, isola centrale e pavimento in gres effetto cemento.",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Pavimento in parquet rovere naturale",
+    "category": "Pavimenti",
+    "imageUrl": "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800&q=80",
+    "description": "Posa di parquet in rovere massello a spina di pesce in soggiorno e zona pranzo, con finitura ad olio naturale.",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Bagno con doccia a filo pavimento",
+    "category": "Bagni",
+    "imageUrl": "https://images.unsplash.com/photo-1620626011761-996317702519?w=800&q=80",
+    "description": "Bagno secondario rinnovato con doccia a filo, piastrelle formato maxi 120x120 e lavabo da incasso.",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Facciata esterna riqualificata",
+    "category": "Esterni",
+    "imageUrl": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
+    "description": "Risanamento e tinteggiatura di facciata condominiale con intonaco al silossano, cappotto termico e nuove grondaie.",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Appartamento ristrutturato chiavi in mano",
+    "category": "Ristrutturazioni",
+    "imageUrl": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80",
+    "description": "Ristrutturazione totale di appartamento anni '70: nuovi impianti, parquet, tinteggiatura e cucina su misura.",
+    "featured": false
+  },
+  {
+    "id": 7,
+    "title": "Cucina classica in legno massello",
+    "category": "Cucine",
+    "imageUrl": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
+    "description": "Installazione di cucina classica in legno di ciliegio con top in granito nero e pavimento in cotto.",
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Pavimento in gres effetto pietra",
+    "category": "Pavimenti",
+    "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
+    "description": "Posa di gres porcellanato 60x120 effetto pietra naturale in zona living con riscaldamento a pavimento.",
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Terrazzo e balcone riqualificato",
+    "category": "Esterni",
+    "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    "description": "Posa di pavimento in grès anti-scivolo su terrazzo, impermeabilizzazione e nuova ringhiera in acciaio inox.",
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "Villa unifamiliare — ristrutturazione totale",
+    "category": "Ristrutturazioni",
+    "imageUrl": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80",
+    "description": "Ristrutturazione completa di villa bifamiliare a Moncalieri: nuovi impianti, cappotto, infissi e finiture di pregio.",
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "Bagno in stile spa con vasca freestanding",
+    "category": "Bagni",
+    "imageUrl": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+    "description": "Bagno padronale con vasca freestanding oval, rivestimento in microcemento bianco e illuminazione LED integrata.",
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "Scala interna con rivestimento in pietra",
+    "category": "Ristrutturazioni",
+    "imageUrl": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&q=80",
+    "description": "Rivestimento di scala interna con gradini in pietra serena levigata e corrimano in ferro battuto su misura.",
+    "featured": false
+  }
+]
