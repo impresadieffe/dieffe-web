@@ -8,24 +8,77 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: #FFFFFF;
 
-  /* Brand colors */
+  /* Primary */
   --color-primary: #1A2E4A;
   --color-primary-light: #243d61;
   --color-primary-dark: #111e30;
 
+  /* Accent */
   --color-accent: #E8540A;
-  --color-accent-light: #ff6b20;
+  --color-accent-light: #ff6b1a;
   --color-accent-dark: #c44508;
 
-  --color-neutral-50: #F5F5F3;
-  --color-neutral-900: #1A1A1A;
+  /* Text */
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B7280;
 
   /* Font */
   --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: #F5F5F3;
+  color: #1A1A1A;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8540A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b1a;
+}
+
+/* Text selection */
+::selection {
+  background-color: #E8540A;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #E8540A;
+  color: #ffffff;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
 }

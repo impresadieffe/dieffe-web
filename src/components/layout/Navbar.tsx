@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -15,12 +16,11 @@ const navLinks = [
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
-    handleScroll(); // set correct state on mount
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -29,20 +29,32 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 h-16 md:h-20 transition-all duration-300 ${
-          scrolled ? 'bg-white shadow-md' : 'bg-transparent'
+          scrolled
+            ? 'bg-white/95 backdrop-blur-xl shadow-md border-b border-black/5'
+            : 'bg-transparent border-b border-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
+
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none select-none">
+          <Link href="/" className="flex flex-col leading-none select-none group">
+            <div className="flex items-end">
+              <span
+                className={`font-black text-2xl tracking-tight transition-colors duration-300 ${
+                  scrolled ? 'text-primary' : 'text-white'
+                }`}
+              >
+                DIEFFE
+              </span>
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse inline-block ml-0.5 mb-2 shrink-0" aria-hidden="true" />
+            </div>
             <span
-              className={`font-black text-2xl tracking-tight transition-colors duration-300 ${
-                scrolled ? 'text-primary' : 'text-white'
+              className={`text-xs tracking-widest uppercase -mt-0.5 transition-colors duration-300 ${
+                scrolled ? 'text-primary/60' : 'text-white/60'
               }`}
             >
-              DIEFFE
+              Ristrutturazioni
             </span>
-            <span className="text-sm font-medium text-accent">Ristrutturazioni</span>
           </Link>
 
           {/* Desktop nav */}
@@ -53,10 +65,12 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative py-1 text-sm font-medium transition-colors duration-300 ${
-                    scrolled
-                      ? 'text-primary hover:text-accent'
-                      : 'text-white hover:text-accent'
+                  className={`relative py-1 text-sm font-medium transition-colors duration-200 ${
+                    isActive
+                      ? scrolled ? 'text-primary' : 'text-white'
+                      : scrolled
+                        ? 'text-primary/60 hover:text-primary'
+                        : 'text-white/70 hover:text-white'
                   }`}
                 >
                   {link.label}
@@ -77,12 +91,16 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <Link
               href="/contatti"
-              className="hidden md:inline-flex items-center px-5 py-2.5 bg-accent text-white text-sm font-semibold rounded-lg hover:bg-accent-dark transition-colors duration-200"
+              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 border border-accent text-accent text-sm font-semibold rounded-lg hover:bg-accent hover:text-white transition-all duration-200 group"
             >
               Richiedi Preventivo
+              <ArrowRight
+                size={14}
+                className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
+              />
             </Link>
 
-            {/* Hamburger button */}
+            {/* Hamburger */}
             <button
               className="md:hidden flex flex-col justify-center gap-1.5 p-2 -mr-2"
               onClick={() => setMenuOpen((v) => !v)}
@@ -115,7 +133,7 @@ export default function Navbar() {
           <>
             {/* Overlay */}
             <motion.div
-              className="fixed inset-0 z-40 bg-black/50"
+              className="fixed inset-0 z-40 bg-black/60"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -126,7 +144,7 @@ export default function Navbar() {
 
             {/* Drawer */}
             <motion.div
-              className="fixed top-0 right-0 bottom-0 z-50 w-72 bg-white flex flex-col shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 z-50 w-80 bg-white flex flex-col shadow-2xl border-l border-black/5"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -136,18 +154,23 @@ export default function Navbar() {
               aria-label="Menu di navigazione"
             >
               {/* Drawer header */}
-              <div className="flex items-center justify-between px-6 py-5 border-b border-neutral-100">
+              <div className="flex items-center justify-between px-6 py-5 border-b border-black/5">
                 <Link
                   href="/"
                   className="flex flex-col leading-none"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <span className="font-black text-2xl text-primary tracking-tight">DIEFFE</span>
-                  <span className="text-sm font-medium text-accent">Ristrutturazioni</span>
+                  <div className="flex items-end">
+                    <span className="font-black text-2xl text-primary tracking-tight">DIEFFE</span>
+                    <span className="w-2 h-2 bg-accent rounded-full animate-pulse inline-block ml-0.5 mb-2 shrink-0" aria-hidden="true" />
+                  </div>
+                  <span className="text-xs text-text-muted tracking-widest uppercase -mt-0.5">
+                    Ristrutturazioni
+                  </span>
                 </Link>
                 <button
                   onClick={() => setMenuOpen(false)}
-                  className="p-2 text-primary hover:text-accent transition-colors"
+                  className="p-2 text-text-muted hover:text-primary transition-colors"
                   aria-label="Chiudi menu"
                 >
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
@@ -168,7 +191,7 @@ export default function Navbar() {
                   return (
                     <motion.div
                       key={link.href}
-                      initial={{ opacity: 0, x: 20 }}
+                      initial={{ opacity: 0, x: 24 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05 + 0.1, duration: 0.2 }}
                     >
@@ -177,8 +200,8 @@ export default function Navbar() {
                         onClick={() => setMenuOpen(false)}
                         className={`flex items-center py-3 px-4 rounded-lg text-base font-medium transition-colors duration-150 ${
                           isActive
-                            ? 'bg-primary/5 text-primary border-l-2 border-accent pl-3.5'
-                            : 'text-neutral-700 hover:bg-neutral-50 hover:text-primary'
+                            ? 'bg-accent/10 text-primary border-l-2 border-accent pl-3.5'
+                            : 'text-text-muted hover:bg-black/5 hover:text-primary'
                         }`}
                       >
                         {link.label}
@@ -189,13 +212,14 @@ export default function Navbar() {
               </nav>
 
               {/* Drawer CTA */}
-              <div className="p-6 border-t border-neutral-100">
+              <div className="p-6 border-t border-black/5">
                 <Link
                   href="/contatti"
                   onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-center w-full px-5 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent-dark transition-colors duration-200"
+                  className="flex items-center justify-center gap-2 w-full px-5 py-3 border border-accent text-accent font-semibold rounded-lg hover:bg-accent hover:text-white transition-all duration-200 group"
                 >
                   Richiedi Preventivo
+                  <ArrowRight size={16} className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
                 </Link>
               </div>
             </motion.div>

@@ -52,7 +52,7 @@ function WhatsAppIcon() {
 
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white">
+    <footer className="bg-primary border-t border-white/5">
       {/* Main grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
@@ -60,10 +60,15 @@ export default function Footer() {
           {/* Colonna 1 — Brand */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex flex-col leading-none select-none w-fit">
-              <span className="font-black text-2xl tracking-tight text-white">DIEFFE</span>
-              <span className="text-sm font-medium text-accent">Ristrutturazioni</span>
+              <div className="flex items-end">
+                <span className="font-black text-2xl tracking-tight text-white">DIEFFE</span>
+                <span className="w-2 h-2 bg-accent rounded-full inline-block ml-0.5 mb-2 shrink-0" aria-hidden="true" />
+              </div>
+              <span className="text-xs text-text-muted tracking-widest uppercase -mt-0.5">
+                Ristrutturazioni
+              </span>
             </Link>
-            <p className="text-sm leading-relaxed text-white/70">
+            <p className="text-sm leading-relaxed text-text-muted">
               Impresa edile professionale con sede a Moncalieri (TO). Trasformiamo
               i tuoi spazi con qualità artigianale e materiali di prima scelta.
             </p>
@@ -71,21 +76,21 @@ export default function Footer() {
               <a
                 href={siteData.social.facebook}
                 aria-label="Facebook"
-                className="p-2 rounded-lg bg-white/10 text-white/70 hover:bg-accent hover:text-white transition-colors duration-200"
+                className="p-2 rounded-lg bg-white/5 text-text-muted hover:bg-accent hover:text-white transition-colors duration-200"
               >
                 <FacebookIcon />
               </a>
               <a
                 href={siteData.social.instagram}
                 aria-label="Instagram"
-                className="p-2 rounded-lg bg-white/10 text-white/70 hover:bg-accent hover:text-white transition-colors duration-200"
+                className="p-2 rounded-lg bg-white/5 text-text-muted hover:bg-accent hover:text-white transition-colors duration-200"
               >
                 <InstagramIcon />
               </a>
               <a
                 href={`https://wa.me/${siteData.whatsapp.replace(/\D/g, '')}`}
                 aria-label="WhatsApp"
-                className="p-2 rounded-lg bg-white/10 text-green-500 hover:bg-green-600 hover:text-white transition-colors duration-200"
+                className="p-2 rounded-lg bg-white/5 text-text-muted hover:bg-green-600 hover:text-white transition-colors duration-200"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -96,15 +101,18 @@ export default function Footer() {
 
           {/* Colonna 2 — Navigazione */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-white/50">
-              Navigazione
-            </h3>
+            <div>
+              <div className="h-px w-16 bg-accent mb-3" />
+              <h3 className="text-sm font-semibold text-white">
+                Navigazione
+              </h3>
+            </div>
             <ul className="flex flex-col gap-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/70 hover:text-accent transition-colors duration-200"
+                    className="text-sm text-text-muted hover:text-white transition-colors duration-200"
                   >
                     {link.label}
                   </Link>
@@ -115,15 +123,18 @@ export default function Footer() {
 
           {/* Colonna 3 — Servizi */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-white/50">
-              I Nostri Servizi
-            </h3>
+            <div>
+              <div className="h-px w-16 bg-accent mb-3" />
+              <h3 className="text-sm font-semibold text-white">
+                I Nostri Servizi
+              </h3>
+            </div>
             <ul className="flex flex-col gap-2">
               {services.map((s) => (
                 <li key={s.slug}>
                   <Link
                     href={`/servizi#${s.slug}`}
-                    className="text-sm text-white/70 hover:text-accent transition-colors duration-200"
+                    className="text-sm text-text-muted hover:text-white transition-colors duration-200"
                   >
                     {s.label}
                   </Link>
@@ -134,19 +145,22 @@ export default function Footer() {
 
           {/* Colonna 4 — Contatti */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-white/50">
-              Contatti
-            </h3>
+            <div>
+              <div className="h-px w-16 bg-accent mb-3" />
+              <h3 className="text-sm font-semibold text-white">
+                Contatti
+              </h3>
+            </div>
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span className="text-sm text-white/70">{siteData.address}</span>
+                <span className="text-sm text-text-muted">{siteData.address}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="shrink-0 text-accent" />
                 <a
                   href={`tel:${siteData.phone.replace(/\s/g, '')}`}
-                  className="text-sm text-white/70 hover:text-accent transition-colors duration-200"
+                  className="text-sm text-text-muted hover:text-white transition-colors duration-200"
                 >
                   {siteData.phone}
                 </a>
@@ -155,14 +169,14 @@ export default function Footer() {
                 <Mail size={16} className="shrink-0 text-accent" />
                 <a
                   href={`mailto:${siteData.email}`}
-                  className="text-sm text-white/70 hover:text-accent transition-colors duration-200"
+                  className="text-sm text-text-muted hover:text-white transition-colors duration-200"
                 >
                   {siteData.email}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <Clock size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span className="text-sm text-white/70">{siteData.orari}</span>
+                <span className="text-sm text-text-muted">{siteData.orari}</span>
               </li>
             </ul>
           </div>
@@ -171,22 +185,22 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
+      <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-white/50">
+          <p className="text-xs text-text-muted">
             © 2025 Dieffe Ristrutturazioni — P.IVA {siteData.piva}
           </p>
           <div className="flex items-center gap-4">
             <Link
               href="/privacy-policy"
-              className="text-xs text-white/50 hover:text-white/90 transition-colors duration-200"
+              className="text-xs text-text-muted hover:text-white transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <span className="text-white/20">·</span>
             <Link
               href="/cookie-policy"
-              className="text-xs text-white/50 hover:text-white/90 transition-colors duration-200"
+              className="text-xs text-text-muted hover:text-white transition-colors duration-200"
             >
               Cookie Policy
             </Link>
