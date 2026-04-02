@@ -32,14 +32,16 @@ export default function HeroSection() {
             src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80"
             alt=""
             fill
-            className="object-cover opacity-[0.18]"
+            className="object-cover opacity-50"
             priority
             aria-hidden="true"
           />
         </div>
 
-        {/* Gradient overlay — uniform dark blue, no orange */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/85" />
+        {/* Gradient overlay — scuro a sinistra, trasparente in basso a destra */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1A2E4A]/95 via-[#1A2E4A]/80 to-[#1A2E4A]/15" />
+        {/* Secondo layer — protegge la colonna testo */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2E4A]/60 via-transparent to-transparent" />
 
         {/* Decorative: dot grid */}
         <div

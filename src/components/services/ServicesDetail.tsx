@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
@@ -20,80 +22,72 @@ export default function ServicesDetail() {
           <section
             key={service.id}
             id={service.slug}
-            className={[
-              'py-24',
-              index > 0 ? 'border-t border-gray-100' : '',
-              isEven ? 'bg-white' : 'bg-background',
-            ].join(' ')}
+            className={isEven ? 'bg-white' : 'bg-[#F5F5F3]'}
           >
-            <Container>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                {/* Image */}
+            <div className="max-w-6xl mx-auto px-8 py-24">
+              <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+                {/* Immagine */}
                 <div className={isEven ? '' : 'lg:order-2'}>
-                  <FadeIn direction={isEven ? 'left' : 'right'}>
-                    <div className="group relative aspect-[4/3] rounded-2xl shadow-xl overflow-hidden">
-                      <Image
-                        src={service.imageUrl}
-                        alt={service.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                      />
+                  <FadeIn direction="left">
+                    <div className="rounded-2xl overflow-hidden shadow-xl">
+                      <div className="relative aspect-[4/3] w-full">
+                        <Image
+                          src={service.imageUrl}
+                          alt={service.title}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                      </div>
                     </div>
                   </FadeIn>
                 </div>
 
-                {/* Text */}
+                {/* Testo */}
                 <div className={isEven ? '' : 'lg:order-1'}>
-                  <FadeIn direction={isEven ? 'right' : 'left'} delay={0.15}>
+                  <FadeIn direction="right" delay={0.15}>
                     <div>
-                      {/* Decorative number */}
-                      <span
-                        aria-hidden="true"
-                        className="block text-8xl font-black text-gray-100 leading-none -mb-5 select-none"
-                      >
-                        {num}
-                      </span>
-
-                      <span className="text-accent uppercase tracking-widest text-sm font-semibold">
+                      <span className="text-accent text-xs uppercase tracking-widest font-semibold">
                         I Nostri Servizi
                       </span>
 
-                      <h2 className="font-black text-4xl text-primary leading-tight mt-2">
+                      <span className={`font-black text-8xl leading-none block mt-2 ${isEven ? 'text-gray-200' : 'text-gray-300'}`}>
+                        {num}
+                      </span>
+
+                      <h2 className="font-black text-4xl text-[#1A2E4A] leading-tight">
                         {service.title}
                       </h2>
 
-                      <p className="text-gray-600 leading-relaxed text-lg mt-4">
+                      <div className="w-10 h-[3px] bg-accent rounded-full mt-5" />
+
+                      <p className="text-gray-600 text-base leading-relaxed mt-5">
                         {service.fullDescription}
                       </p>
 
-                      <ul className="mt-8 flex flex-col gap-3">
+                      <ul className="mt-6 space-y-3">
                         {service.keyPoints.map((point) => (
-                          <li key={point} className="flex gap-3 items-start">
-                            <CheckCircle2
-                              size={20}
-                              className="text-accent flex-shrink-0 mt-0.5"
-                            />
-                            <span className="text-gray-700 font-medium">{point}</span>
+                          <li key={point} className="flex gap-3 items-center">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                            <span className="text-gray-700 text-sm font-medium">{point}</span>
                           </li>
                         ))}
                       </ul>
 
                       <Link
                         href="/contatti"
-                        className="mt-10 inline-flex items-center gap-2 px-8 py-4 bg-primary text-white rounded-full font-semibold hover:bg-primary-light transition-colors duration-200 group"
+                        className="mt-8 inline-flex items-center gap-2 bg-[#1A2E4A] text-white rounded-full px-8 py-3 font-semibold text-sm hover:bg-[#0f1e30] transition-colors duration-300 group"
                       >
                         Richiedi Preventivo
-                        <ArrowRight
-                          size={18}
-                          className="transition-transform duration-200 group-hover:translate-x-1"
-                        />
+                        <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                       </Link>
                     </div>
                   </FadeIn>
                 </div>
+
               </div>
-            </Container>
+            </div>
           </section>
         );
       })}
