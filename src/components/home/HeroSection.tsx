@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const titleLines = [
   [{ text: 'Rinnova', accent: false }],
@@ -39,9 +39,9 @@ export default function HeroSection() {
         </div>
 
         {/* Gradient overlay — scuro a sinistra, trasparente in basso a destra */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1A2E4A]/95 via-[#1A2E4A]/80 to-[#1A2E4A]/15" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A7B]/95 via-[#1E3A7B]/80 to-[#1E3A7B]/15" />
         {/* Secondo layer — protegge la colonna testo */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A2E4A]/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1E3A7B]/60 via-transparent to-transparent" />
 
         {/* Decorative: dot grid */}
         <div
@@ -184,27 +184,33 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator — outside overflow-hidden wrapper, so it's never clipped */}
-      <div className="absolute bottom-8 left-8 z-10 flex items-center gap-3" aria-hidden="true">
-        <span
-          className="text-white/40 text-xs tracking-widest uppercase"
-          style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
-        >
+      {/* Scroll indicator — centrato, mouse SVG + frecce cascade */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2" aria-hidden="true">
+        <span className="text-white/40 text-xs uppercase tracking-[0.3em] font-medium">
           Scorri
         </span>
-        <motion.div
-          className="w-px bg-white/40 origin-top"
-          initial={{ scaleY: 0, height: 0 }}
-          animate={{ height: 48, scaleY: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 1.5,
-            ease: 'easeOut',
-            repeat: Infinity,
-            repeatType: 'reverse',
-            repeatDelay: 0.8,
-          }}
-        />
+
+        {/* Mouse SVG animato */}
+        <div className="relative w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center pt-1.5">
+          <motion.div
+            className="w-1 h-2 bg-white/60 rounded-full"
+            animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
+
+        {/* Frecce cascade */}
+        <div className="flex flex-col items-center">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2, ease: 'easeInOut' }}
+            >
+              <ChevronDown className="w-3 h-3 text-white/40" />
+            </motion.div>
+          ))}
+        </div>
       </div>
 
     </section>

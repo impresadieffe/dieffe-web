@@ -16,7 +16,7 @@ export default function ScrollToTop() {
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Torna in cima"
-      className={`fixed bottom-8 right-8 z-50 w-12 h-12 bg-[#E8540A] hover:bg-[#c44508] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer ${
+      className={`fixed bottom-8 right-8 z-50 w-12 h-12 bg-[#00AEEF] hover:bg-[#0090c7] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 cursor-pointer ${
         isVisible
           ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-4 pointer-events-none'

@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Container from '@/components/ui/Container';
 import teamData from '@/data/team.json';
 
@@ -15,24 +14,17 @@ interface TeamMember {
 }
 
 function TeamCard({ member, index }: { member: TeamMember; index: number }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-50px' });
-
   return (
     <motion.div
-      ref={ref}
       initial={{ opacity: 0, y: 24 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.12, ease: [0.23, 1, 0.32, 1] }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-40px' }}
+      transition={{ duration: 0.4, delay: index * 0.12, ease: [0.21, 0.47, 0.32, 0.98] }}
     >
-      <div
-        className="group bg-white rounded-2xl overflow-hidden border border-gray-100
-                   hover:shadow-2xl hover:-translate-y-2
-                   transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
-      >
+      <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)] hover:scale-[1.02] transition-all duration-400 ease-out">
+
         {/* Header scuro */}
-        <div className="relative bg-[#1A2E4A] p-8 text-center overflow-hidden">
-          {/* Blob decorativo accent/20 blur */}
+        <div className="relative bg-[#1E3A7B] p-8 text-center overflow-hidden">
           <div
             className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-accent/20 blur-2xl pointer-events-none"
             aria-hidden="true"
@@ -41,8 +33,6 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
             className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-white/5 blur-xl pointer-events-none"
             aria-hidden="true"
           />
-
-          {/* Avatar circolare */}
           <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white/20 shadow-lg z-10">
             <Image
               src={member.imageUrl}
@@ -66,23 +56,21 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
             {member.bio}
           </p>
         </div>
+
       </div>
     </motion.div>
   );
 }
 
 export default function TeamSection() {
-  const titleRef = useRef<HTMLDivElement>(null);
-  const titleInView = useInView(titleRef, { once: true, margin: '-50px' });
-
   return (
     <section className="py-24 bg-white">
       <Container>
         <motion.div
-          ref={titleRef}
           className="flex flex-col items-center text-center"
           initial={{ opacity: 0, y: 20 }}
-          animate={titleInView ? { opacity: 1, y: 0 } : {}}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           <span className="text-sm font-semibold uppercase tracking-widest text-accent mb-2">

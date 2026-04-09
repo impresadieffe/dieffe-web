@@ -56,7 +56,7 @@ export default function ServicesDetail() {
                         {num}
                       </span>
 
-                      <h2 className="font-black text-4xl text-[#1A2E4A] leading-tight">
+                      <h2 className="font-black text-4xl text-[#1E3A7B] leading-tight">
                         {service.title}
                       </h2>
 
@@ -77,7 +77,7 @@ export default function ServicesDetail() {
 
                       <Link
                         href="/contatti"
-                        className="mt-8 inline-flex items-center gap-2 bg-[#1A2E4A] text-white rounded-full px-8 py-3 font-semibold text-sm hover:bg-[#0f1e30] transition-colors duration-300 group"
+                        className="mt-8 inline-flex items-center gap-2 bg-[#1E3A7B] text-white rounded-full px-8 py-3 font-semibold text-sm hover:bg-[#152d63] transition-colors duration-300 group"
                       >
                         Richiedi Preventivo
                         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />

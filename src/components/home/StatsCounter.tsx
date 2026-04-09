@@ -62,7 +62,7 @@ export default function StatsCounter() {
   const stats = homepageData.stats;
 
   return (
-    <section className="py-28 bg-[#1A2E4A] overflow-hidden">
+    <section className="py-28 bg-[#1E3A7B] overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3">
           {stats.map((stat, i) => (

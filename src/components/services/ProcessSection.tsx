@@ -90,18 +90,18 @@ export default function ProcessSection() {
   const animated = inView ? 'visible' : 'hidden';
 
   return (
-    <section className="bg-[#1A2E4A] py-24">
+    <section className="bg-[#1E3A7B] py-24">
       <div className="max-w-6xl mx-auto px-8">
 
         {/* Titolo */}
         <div className="text-center mb-16">
-          <span className="text-[#E8540A] text-xs uppercase tracking-widest font-semibold">
+          <span className="text-[#00AEEF] text-xs uppercase tracking-widest font-semibold">
             Come Lavoriamo
           </span>
           <h2 className="font-black text-5xl text-white mt-3">
             Il nostro processo
           </h2>
-          <div className="w-10 h-[3px] bg-[#E8540A] rounded-full mx-auto mt-5" />
+          <div className="w-10 h-[3px] bg-[#00AEEF] rounded-full mx-auto mt-5" />
           <p className="text-white/50 mt-4 text-lg">
             4 semplici passi per trasformare il tuo spazio
           </p>
@@ -136,9 +136,9 @@ export default function ProcessSection() {
                   {/* Cerchio numerato — animato con spring */}
                   <motion.div
                     variants={circleVariants}
-                    className="relative z-10 w-14 h-14 rounded-full bg-[#1A2E4A] border-2 border-white/20 flex items-center justify-center mb-6 group-hover:border-[#E8540A] group-hover:bg-[#E8540A]/10 transition-colors duration-500"
+                    className="relative z-10 w-14 h-14 rounded-full bg-[#1E3A7B] border-2 border-white/20 flex items-center justify-center mb-6 group-hover:border-[#00AEEF] group-hover:bg-[#00AEEF]/10 transition-colors duration-500"
                   >
-                    <span className="font-black text-lg text-white/60 group-hover:text-[#E8540A] transition-colors duration-500">
+                    <span className="font-black text-lg text-white/60 group-hover:text-[#00AEEF] transition-colors duration-500">
                       {step.number}
                     </span>
                   </motion.div>
@@ -148,7 +148,7 @@ export default function ProcessSection() {
                     variants={contentVariants}
                     className="flex flex-col items-center"
                   >
-                    <Icon className="w-8 h-8 text-[#E8540A] mb-4" />
+                    <Icon className="w-8 h-8 text-[#00AEEF] mb-4" />
                     <h3 className="font-black text-white text-lg mb-3">
                       {step.title}
                     </h3>
@@ -171,7 +171,7 @@ export default function ProcessSection() {
               <div key={step.number} className="flex gap-6 items-start">
                 {/* Colonna sinistra: cerchio + linea */}
                 <div className="flex flex-col items-center flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center bg-[#1A2E4A]">
+                  <div className="w-10 h-10 rounded-full border-2 border-white/20 flex items-center justify-center bg-[#1E3A7B]">
                     <span className="font-black text-sm text-white/60">
                       {step.number}
                     </span>
@@ -183,7 +183,7 @@ export default function ProcessSection() {
 
                 {/* Colonna destra: contenuto */}
                 <div className={isLast ? 'pb-0' : 'pb-10'}>
-                  <Icon className="w-8 h-8 text-[#E8540A] mb-3" />
+                  <Icon className="w-8 h-8 text-[#00AEEF] mb-3" />
                   <h3 className="font-black text-white text-lg mb-2">
                     {step.title}
                   </h3>

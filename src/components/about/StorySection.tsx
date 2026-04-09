@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useRef } from 'react';
-import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import Container from '@/components/ui/Container';
 
 const paragraphs = [
@@ -19,21 +19,13 @@ const milestones = [
 ];
 
 export default function StorySection() {
-  const sectionRef = useRef<HTMLElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const leftInView = useInView(leftRef, { once: true, margin: '-80px' });
   const rightInView = useInView(rightRef, { once: true, margin: '-80px' });
 
-  // Parallax sull'immagine
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  });
-  const imageY = useTransform(scrollYProgress, [0, 1], ['40px', '-40px']);
-
   return (
-    <section ref={sectionRef} className="py-32 bg-white">
+    <section className="py-32 bg-white">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
@@ -91,7 +83,7 @@ export default function StorySection() {
             </div>
           </motion.div>
 
-          {/* Colonna destra — immagine con parallax + card stat */}
+          {/* Colonna destra — immagine + card stat */}
           <motion.div
             ref={rightRef}
             className="relative"
@@ -99,24 +91,18 @@ export default function StorySection() {
             animate={rightInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
           >
-            {/* Contenitore outer per posizionare la card floating */}
             <div className="relative">
-              {/* Immagine con parallax */}
+              {/* Immagine statica */}
               <div
                 className="relative rounded-2xl overflow-hidden shadow-2xl"
                 style={{ aspectRatio: '3/4' }}
               >
-                <motion.div
-                  className="absolute inset-x-0 w-full"
-                  style={{ y: imageY, top: '-5%', height: '110%' }}
-                >
-                  <Image
-                    src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
-                    alt="Team Dieffe Ristrutturazioni al lavoro"
-                    fill
-                    className="object-cover"
-                  />
-                </motion.div>
+                <Image
+                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
+                  alt="Team Dieffe Ristrutturazioni al lavoro"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Card statistica floating */}

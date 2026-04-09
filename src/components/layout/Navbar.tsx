@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -37,24 +38,25 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
 
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none select-none group">
-            <div className="flex items-end">
-              <span
-                className={`font-black text-2xl tracking-tight transition-colors duration-300 ${
-                  scrolled ? 'text-primary' : 'text-white'
-                }`}
-              >
-                DIEFFE
-              </span>
-              <span className="w-2 h-2 bg-accent rounded-full animate-pulse inline-block ml-0.5 mb-2 shrink-0" aria-hidden="true" />
-            </div>
-            <span
-              className={`text-xs tracking-widest uppercase -mt-0.5 transition-colors duration-300 ${
-                scrolled ? 'text-primary/60' : 'text-white/60'
+          <Link href="/" className="relative select-none h-12 w-[130px] md:h-16 md:w-[180px]">
+            <Image
+              src="/logo-bianco.svg"
+              alt="Dieffe Ristrutturazioni"
+              fill
+              className={`object-contain object-left transition-opacity duration-300 ${
+                scrolled ? 'opacity-0' : 'opacity-100'
               }`}
-            >
-              Ristrutturazioni
-            </span>
+              priority
+            />
+            <Image
+              src="/logo-colorato.svg"
+              alt="Dieffe Ristrutturazioni"
+              fill
+              className={`object-contain object-left transition-opacity duration-300 ${
+                scrolled ? 'opacity-100' : 'opacity-0'
+              }`}
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -157,16 +159,15 @@ export default function Navbar() {
               <div className="flex items-center justify-between px-6 py-5 border-b border-black/5">
                 <Link
                   href="/"
-                  className="flex flex-col leading-none"
+                  className="relative h-12 w-[140px]"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <div className="flex items-end">
-                    <span className="font-black text-2xl text-primary tracking-tight">DIEFFE</span>
-                    <span className="w-2 h-2 bg-accent rounded-full animate-pulse inline-block ml-0.5 mb-2 shrink-0" aria-hidden="true" />
-                  </div>
-                  <span className="text-xs text-text-muted tracking-widest uppercase -mt-0.5">
-                    Ristrutturazioni
-                  </span>
+                  <Image
+                    src="/logo-colorato.svg"
+                    alt="Dieffe Ristrutturazioni"
+                    fill
+                    className="object-contain object-left"
+                  />
                 </Link>
                 <button
                   onClick={() => setMenuOpen(false)}

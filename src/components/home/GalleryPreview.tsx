@@ -29,22 +29,7 @@ function GalleryCard({
 }) {
   const inViewRef = useRef<HTMLDivElement>(null);
   const inView = useInView(inViewRef, { once: true, margin: '-50px' });
-  const [pos, setPos] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const cx = rect.width / 2;
-    const cy = rect.height / 2;
-    const x = ((e.clientX - rect.left - cx) / cx) * 8;
-    const y = ((e.clientY - rect.top - cy) / cy) * 8;
-    setPos({ x, y });
-  };
-
-  const handleMouseLeave = () => {
-    setPos({ x: 0, y: 0 });
-    setHovered(false);
-  };
 
   return (
     <motion.div
@@ -53,18 +38,13 @@ function GalleryCard({
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay, ease: [0.23, 1, 0.32, 1] }}
-      onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={() => setHovered(false)}
     >
-      {/* Immagine con effetto magnetic */}
+      {/* Immagine statica con scale on hover */}
       <motion.div
         className="absolute inset-0"
-        animate={{
-          x: pos.x,
-          y: pos.y,
-          scale: hovered ? 1.05 : 1,
-        }}
+        animate={{ scale: hovered ? 1.05 : 1 }}
         transition={{ type: 'spring', stiffness: 200, damping: 24, mass: 0.8 }}
       >
         <Image
@@ -80,7 +60,7 @@ function GalleryCard({
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to top, rgba(26,46,74,0.92) 0%, rgba(26,46,74,0.4) 50%, transparent 100%)',
+            'linear-gradient(to top, rgba(30,58,123,0.92) 0%, rgba(30,58,123,0.4) 50%, transparent 100%)',
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: hovered ? 1 : 0 }}

@@ -12,7 +12,7 @@ export default function CTABanner() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="relative py-32 bg-[#1A2E4A] overflow-hidden">
+    <section className="relative py-32 bg-[#1E3A7B] overflow-hidden">
 
       {/* Blob accent/10 top-right */}
       <motion.div
@@ -76,7 +76,7 @@ export default function CTABanner() {
           <div className="flex flex-col sm:flex-row gap-4 mt-12 justify-center flex-wrap">
             <Link
               href="/contatti"
-              className="inline-flex items-center gap-2 bg-[#E8540A] hover:bg-[#c44508] text-white rounded-full px-10 py-4 font-semibold transition-colors duration-300"
+              className="inline-flex items-center gap-2 bg-[#00AEEF] hover:bg-[#0090c7] text-white rounded-full px-10 py-4 font-semibold transition-colors duration-300"
             >
               Richiedi Preventivo Gratuito
               <ArrowRight className="w-5 h-5" />
