@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "Dieffe Ristrutturazioni — Qualità che trasforma i tuoi spazi",
   description:
     "Impresa edile a Moncalieri (TO). Ristrutturazioni bagni, cucine, pavimentazioni, impianti e ristrutturazioni complete in tutto il Piemonte.",
+  icons: {
+    icon: "/icona_dieffe.svg",
+    apple: "/icona_dieffe.svg",
+  },
 };
 
 export default function RootLayout({
