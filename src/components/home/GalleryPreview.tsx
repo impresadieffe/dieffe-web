@@ -7,6 +7,7 @@ import { motion, useInView } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import SectionTitle from '@/components/ui/SectionTitle';
 import Container from '@/components/ui/Container';
+import { cn } from '@/lib/utils';
 import galleryData from '@/data/gallery.json';
 
 const featured = galleryData.filter((g) => g.featured).slice(0, 3);
@@ -34,7 +35,7 @@ function GalleryCard({
   return (
     <motion.div
       ref={inViewRef}
-      className={`relative rounded-2xl overflow-hidden ${className}`}
+      className={cn('relative rounded-2xl overflow-hidden', className)}
       initial={{ opacity: 0, y: 24 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay, ease: [0.23, 1, 0.32, 1] }}
@@ -74,10 +75,7 @@ function GalleryCard({
         animate={{ y: hovered ? 0 : 20, opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
       >
-        <span
-          className="text-xs font-semibold uppercase tracking-widest text-accent
-                     bg-accent/20 border border-accent/30 rounded-full px-3 py-1"
-        >
+        <span className="text-xs font-semibold uppercase tracking-widest text-accent bg-accent/20 border border-accent/30 rounded-full px-3 py-1">
           {item.category}
         </span>
         <h3 className="text-white font-black text-lg mt-2 leading-snug">
@@ -120,11 +118,7 @@ export default function GalleryPreview() {
         <div className="flex justify-center mt-12">
           <Link
             href="/galleria"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4
-                       border-2 border-primary text-primary font-semibold rounded-full
-                       hover:bg-primary hover:text-white
-                       transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]
-                       group"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group"
           >
             Sfoglia tutti i lavori
             <ArrowRight
