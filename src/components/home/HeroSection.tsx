@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import homepageData from '@/data/homepage.json';
 
 const titleLines = [
   [{ text: 'Rinnova', accent: false }],
@@ -13,13 +14,9 @@ const titleLines = [
   ],
 ];
 
-const stats = [
-  { number: '20+', label: 'Anni' },
-  { number: '500+', label: 'Progetti' },
-  { number: '300+', label: 'Clienti' },
-];
-
 export default function HeroSection() {
+  const stats = homepageData.stats;
+
   return (
     <section className="relative min-h-screen flex items-center bg-background">
 
@@ -79,7 +76,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
           >
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/40">
-              Torino &amp; Piemonte · Est. 2004
+              Torino &amp; Provincia · Dal 2013
             </span>
           </motion.div>
 
@@ -128,9 +125,7 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            Trasformiamo appartamenti, bagni e cucine con oltre vent&apos;anni di
-            esperienza artigianale. Qualità senza compromessi, tempi certi,
-            risultati che durano.
+            {homepageData.hero.subtitle}
           </motion.p>
 
           {/* CTAs */}
@@ -144,7 +139,7 @@ export default function HeroSection() {
               href="/contatti"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent hover:bg-accent-light text-white rounded-full font-semibold transition-colors duration-200 group"
             >
-              Richiedi Preventivo
+              {homepageData.hero.cta_primary}
               <ArrowRight
                 size={18}
                 className="transition-transform duration-200 group-hover:translate-x-1"
@@ -154,7 +149,7 @@ export default function HeroSection() {
               href="/servizi"
               className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white hover:border-white/60 rounded-full font-semibold transition-colors duration-200"
             >
-              Scopri i Servizi
+              {homepageData.hero.cta_secondary}
             </Link>
           </motion.div>
 
@@ -172,7 +167,7 @@ export default function HeroSection() {
                 )}
                 <div className="flex flex-col">
                   <span className="text-white font-bold text-2xl leading-none">
-                    {stat.number}
+                    {stat.value}{stat.suffix}
                   </span>
                   <span className="text-white/50 text-sm mt-1">
                     {stat.label}

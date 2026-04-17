@@ -7,7 +7,7 @@ import homepageData from '@/data/homepage.json';
 
 interface Stat {
   label: string;
-  value: string;
+  value: number | string;
   suffix: string;
 }
 
@@ -18,7 +18,7 @@ function StatItem({ stat, delay }: { stat: Stat; delay: number }) {
 
   useEffect(() => {
     if (!inView) return;
-    const target = parseInt(stat.value, 10);
+    const target = Number(stat.value);
     const controls = animate(0, target, {
       duration: 2,
       ease: 'easeOut',

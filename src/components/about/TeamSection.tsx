@@ -16,15 +16,16 @@ interface TeamMember {
 function TeamCard({ member, index }: { member: TeamMember; index: number }) {
   return (
     <motion.div
+      className="h-full"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{ duration: 0.4, delay: index * 0.12, ease: [0.21, 0.47, 0.32, 0.98] }}
     >
-      <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)] hover:scale-[1.02] transition-all duration-400 ease-out">
+      <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)] hover:scale-[1.02] transition-all duration-400 ease-out h-full flex flex-col">
 
         {/* Header scuro */}
-        <div className="relative bg-[#1E3A7B] p-8 text-center overflow-hidden">
+        <div className="relative bg-[#1E3A7B] p-8 text-center overflow-hidden flex-shrink-0">
           <div
             className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-accent/20 blur-2xl pointer-events-none"
             aria-hidden="true"
@@ -44,7 +45,7 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
         </div>
 
         {/* Body */}
-        <div className="p-6 text-center">
+        <div className="p-6 text-center flex flex-col flex-grow">
           <h3 className="font-black text-xl text-primary">
             {member.name}
           </h3>
@@ -52,7 +53,7 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
             {member.role}
           </p>
           <div className="w-8 h-[2px] bg-accent mx-auto mt-4 rounded-full" />
-          <p className="text-gray-500 mt-4 leading-relaxed text-sm">
+          <p className="text-gray-500 mt-4 leading-relaxed text-sm flex-grow">
             {member.bio}
           </p>
         </div>
@@ -82,7 +83,7 @@ export default function TeamSection() {
           <div className="w-12 h-1 bg-accent mt-3 rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 items-stretch">
           {teamData.map((member, i) => (
             <TeamCard key={member.id} member={member} index={i} />
           ))}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import siteData from '@/data/site.json';
+import servicesData from '@/data/services.json';
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -10,23 +11,6 @@ const navLinks = [
   { label: 'Galleria', href: '/galleria' },
   { label: 'Contatti', href: '/contatti' },
 ];
-
-const services = [
-  { label: 'Ristrutturazione Bagno', slug: 'ristrutturazione-bagno' },
-  { label: 'Ristrutturazione Cucina', slug: 'ristrutturazione-cucina' },
-  { label: 'Pavimentazioni', slug: 'pavimentazioni' },
-  { label: 'Impianti Elettrici', slug: 'impianti-elettrici' },
-  { label: 'Tinteggiatura e Intonaci', slug: 'tinteggiatura-intonaci' },
-  { label: 'Ristrutturazione Completa', slug: 'ristrutturazione-completa' },
-];
-
-function FacebookIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.269h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-    </svg>
-  );
-}
 
 function InstagramIcon() {
   return (
@@ -52,6 +36,10 @@ function WhatsAppIcon() {
 }
 
 export default function Footer() {
+  const services = [...servicesData]
+    .filter((s) => s.active)
+    .sort((a, b) => a.order - b.order);
+
   return (
     <footer className="bg-primary border-t border-white/5">
       {/* Main grid */}
@@ -69,26 +57,21 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed text-white/60">
-              Impresa edile professionale con sede a Moncalieri (TO). Trasformiamo
+              Impresa edile professionale con sede a Nichelino (TO). Trasformiamo
               i tuoi spazi con qualità artigianale e materiali di prima scelta.
             </p>
             <div className="flex items-center gap-3 pt-1">
               <a
-                href={siteData.social.facebook}
-                aria-label="Facebook"
-                className="p-2 rounded-lg bg-white/5 text-white/70 hover:bg-accent hover:text-white transition-colors duration-200"
-              >
-                <FacebookIcon />
-              </a>
-              <a
                 href={siteData.social.instagram}
                 aria-label="Instagram"
                 className="p-2 rounded-lg bg-white/5 text-white/70 hover:bg-accent hover:text-white transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <InstagramIcon />
               </a>
               <a
-                href={`https://wa.me/${siteData.whatsapp.replace(/\D/g, '')}`}
+                href={`https://wa.me/${siteData.whatsapp}`}
                 aria-label="WhatsApp"
                 className="p-2 rounded-lg bg-white/5 text-white/70 hover:bg-green-600 hover:text-white transition-colors duration-200"
                 target="_blank"
@@ -136,7 +119,7 @@ export default function Footer() {
                     href={`/servizi#${s.slug}`}
                     className="text-sm text-white/70 hover:text-white transition-colors duration-200"
                   >
-                    {s.label}
+                    {s.title}
                   </Link>
                 </li>
               ))}
@@ -188,7 +171,7 @@ export default function Footer() {
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-white/50">
-            © 2025 Dieffe Ristrutturazioni — P.IVA {siteData.piva}
+            © 2026 Dieffe Ristrutturazioni — Tutti i diritti riservati | P.IVA {siteData.piva}
           </p>
           <div className="flex items-center gap-4">
             <Link

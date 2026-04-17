@@ -1,15 +1,14 @@
 {
   "name": "Dieffe Ristrutturazioni",
-  "tagline": "Qualità che trasforma i tuoi spazi",
-  "address": "Via Roma 42, 10024 Moncalieri (TO)",
-  "phone": "+39 011 123 4567",
-  "whatsapp": "+393391234567",
-  "email": "info@impresadieffe.it",
+  "tagline": "Qualità edile dal 2013 a Torino e provincia",
+  "address": "Via Vincenzo Gioberti 17, 10042 Nichelino (TO)",
+  "phone": "+39 349 319 1144",
+  "whatsapp": "+393493191144",
+  "email": "impresa.dieffe@gmail.com",
   "website": "https://www.impresadieffe.it",
-  "piva": "IT12345678901",
-  "orari": "Lun–Ven 8:00–18:00 | Sab 8:00–13:00",
+  "piva": "10908150013",
+  "orari": "Lun–Ven 8:00–18:00",
   "social": {
-    "facebook": "#",
-    "instagram": "#"
+    "instagram": "https://instagram.com/impresadieffe"
   }
 }

@@ -1,0 +1,43 @@
+{
+  "storia": {
+    "titolo": "Dal 2013 al tuo fianco",
+    "paragrafo1": "Dieffe Ristrutturazioni nasce l'8 marzo 2013 a Moncalieri, alle porte di Torino, da un progetto imprenditoriale familiare fondato su valori solidi: qualità artigianale, trasparenza e rispetto del cliente. L'azienda unisce l'esperienza edile quasi trentennale di Andrea Addamo alla competenza manageriale di Daniela Faro, creando un'impresa capace di offrire un servizio completo, affidabile e attento a ogni dettaglio.",
+    "paragrafo2": "Nel corso degli anni, Dieffe ha costruito un rapporto di fiducia profondo con privati, amministratori di condominio, architetti e geometri di tutta la provincia torinese. La specializzazione nel rifacimento tetti a Torino e nella realizzazione di facciate e cappotti termici ha reso l'impresa un nome riconosciuto sul territorio, sinonimo di lavori eseguiti a regola d'arte e consegnati nei tempi stabiliti.",
+    "paragrafo3": "Oggi Dieffe guarda al futuro con la bioedilizia e le costruzioni in legno a Torino, abbracciando la sostenibilità come visione strategica. Costruire bene, nel rispetto dell'ambiente e delle persone, è la promessa che rinnova ogni giorno verso i propri clienti."
+  },
+  "timeline": [
+    {
+      "anno": "2013",
+      "testo": "Fondazione di Dieffe Ristrutturazioni a Moncalieri l'8 marzo 2013: nasce un'impresa edile fondata su qualità artigianale, esperienza trentennale e trasparenza verso il cliente."
+    },
+    {
+      "anno": "2016",
+      "testo": "Le prime importanti collaborazioni con amministratori di condominio, architetti e geometri di spicco nel torinese consolidano la reputazione dell'impresa sul territorio."
+    },
+    {
+      "anno": "2020",
+      "testo": "Specializzazione nel rifacimento tetti e nella realizzazione di facciate e cappotti termici a Torino: una firma riconosciuta nell'edilizia piemontese."
+    },
+    {
+      "anno": "2025",
+      "testo": "Un massimo storico: l'azienda raggiunge il suo picco di crescita con oltre 500 lavori completati e cantieri di grande entità su tutto il territorio torinese."
+    }
+  ],
+  "valori": [
+    {
+      "icona": "Shield",
+      "titolo": "Qualità Certificata",
+      "testo": "Utilizziamo esclusivamente materiali di prima scelta selezionati tra i migliori fornitori. Su ogni lavoro rilasciamo garanzia scritta, perché la qualità non è un optional ma il nostro standard."
+    },
+    {
+      "icona": "Clock",
+      "titolo": "Rispetto dei Tempi",
+      "testo": "La puntualità è un impegno irrinunciabile che prendiamo con ogni cliente. Pianifichiamo ogni cantiere con rigore e comunichiamo in modo proattivo qualsiasi aggiornamento sul progresso dei lavori."
+    },
+    {
+      "icona": "FileText",
+      "titolo": "Trasparenza Totale",
+      "testo": "I nostri preventivi sono chiari, dettagliati e senza costi nascosti. Ogni voce di spesa viene documentata e concordata prima di iniziare, così il cliente sa sempre dove va il suo investimento."
+    }
+  ]
+}

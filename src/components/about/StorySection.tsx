@@ -4,25 +4,16 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Container from '@/components/ui/Container';
-
-const paragraphs = [
-  'Dieffe Ristrutturazioni nasce nel 2004 a Moncalieri, alle porte di Torino, dall\'intuizione di Franco Ferraris: offrire un servizio di ristrutturazione residenziale che mettesse al centro la qualità artigianale e il rapporto diretto con il cliente, in un mercato spesso dominato da imprese impersonali.',
-  'Nei primi anni ci siamo concentrati sui lavori di quartiere — bagni, cucine, rifacimento pavimenti — costruendo la nostra reputazione cantiere dopo cantiere. La voce si è sparsa: famiglie, architetti e immobiliaristi hanno iniziato a cercarci per progetti via via più ambiziosi.',
-  'Oggi gestiamo ristrutturazioni complete in tutta la provincia di Torino e nel Piemonte. Ogni progetto rimane unico: ascoltiamo, progettiamo, eseguiamo — e consegniamo nei tempi e nei costi concordati.',
-];
-
-const milestones = [
-  { year: '2004', text: 'Fondazione dell\'impresa a Moncalieri (TO)' },
-  { year: '2008', text: 'Espansione in tutta la provincia di Torino' },
-  { year: '2015', text: 'Raggiunto il traguardo di 300 progetti completati' },
-  { year: '2024', text: '20 anni di attività con oltre 500 lavori realizzati' },
-];
+import aboutData from '@/data/about.json';
 
 export default function StorySection() {
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
   const leftInView = useInView(leftRef, { once: true, margin: '-80px' });
   const rightInView = useInView(rightRef, { once: true, margin: '-80px' });
+
+  const { storia, timeline } = aboutData;
+  const paragraphs = [storia.paragrafo1, storia.paragrafo2, storia.paragrafo3];
 
   return (
     <section className="py-32 bg-white">
@@ -40,7 +31,7 @@ export default function StorySection() {
               La Nostra Storia
             </span>
             <h2 className="font-black text-5xl text-primary leading-[1.1] mt-3">
-              Dalla passione<br />all&apos;eccellenza
+              {storia.titolo}
             </h2>
 
             {paragraphs.map((p, i) => (
@@ -51,9 +42,9 @@ export default function StorySection() {
 
             {/* Timeline */}
             <div className="mt-12">
-              {milestones.map((m, i) => (
+              {timeline.map((m, i) => (
                 <motion.div
-                  key={m.year}
+                  key={m.anno}
                   className="flex gap-6 items-start mb-8"
                   initial={{ opacity: 0, x: -16 }}
                   animate={leftInView ? { opacity: 1, x: 0 } : {}}
@@ -66,16 +57,16 @@ export default function StorySection() {
                   {/* Punto + linea connettore */}
                   <div className="flex flex-col items-center flex-shrink-0 pt-1">
                     <div className="w-3 h-3 rounded-full bg-accent" />
-                    {i < milestones.length - 1 && (
+                    {i < timeline.length - 1 && (
                       <div className="w-px flex-1 bg-accent/20 my-2 min-h-[2rem]" />
                     )}
                   </div>
                   <div>
                     <span className="font-black text-accent text-lg leading-none">
-                      {m.year}
+                      {m.anno}
                     </span>
                     <p className="text-gray-600 text-sm leading-relaxed mt-1">
-                      {m.text}
+                      {m.testo}
                     </p>
                   </div>
                 </motion.div>

@@ -8,7 +8,7 @@ import CTABanner from '@/components/home/CTABanner';
 export const metadata: Metadata = {
   title: 'Chi Siamo | Dieffe Ristrutturazioni',
   description:
-    'Scopri la storia di Dieffe Ristrutturazioni: 20 anni di esperienza nelle ristrutturazioni a Torino e in tutto il Piemonte. Qualità, puntualità e trasparenza.',
+    'Scopri la storia di Dieffe Ristrutturazioni: 30 anni di esperienza nelle ristrutturazioni a Torino e provincia. Fondati nel 2013 a Moncalieri. Qualità, puntualità e trasparenza.',
 };
 
 export default function ChiSiamoPage() {
@@ -16,7 +16,7 @@ export default function ChiSiamoPage() {
     <>
       <PageHero
         title="Chi Siamo"
-        subtitle="Vent'anni di passione per il tuo spazio"
+        subtitle="Trent'anni di passione per il tuo spazio"
         backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
       />
       <StorySection />

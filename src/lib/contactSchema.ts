@@ -1,12 +1,12 @@
 import { z } from 'zod';
 
 export const SERVIZI = [
-  'Ristrutturazione Bagno',
-  'Ristrutturazione Cucina',
-  'Pavimentazioni',
-  'Impianti Elettrici',
-  'Tinteggiatura',
-  'Ristrutturazione Completa',
+  'Rifacimento Tetti',
+  'Facciate e Cappotti Termici',
+  'Ristrutturazioni Complete',
+  'Nuove Costruzioni',
+  'Costruzioni in Bioedilizia',
+  'Impianti Elettrici e Idraulici',
   'Altro',
 ] as const;
 

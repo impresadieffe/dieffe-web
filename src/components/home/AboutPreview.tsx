@@ -9,7 +9,7 @@ import Container from '@/components/ui/Container';
 import homepageData from '@/data/homepage.json';
 
 const keyPoints = [
-  'Oltre 20 anni di esperienza nel settore',
+  'Oltre 30 anni di esperienza nel settore',
   'Materiali di prima qualità certificati',
   'Preventivi gratuiti e trasparenti',
 ];
@@ -42,7 +42,7 @@ export default function AboutPreview() {
 
               {/* Badge */}
               <div className="absolute top-6 left-6 z-10 bg-accent text-white text-sm px-4 py-2 rounded-full font-semibold shadow-lg">
-                Dal 2004
+                Dal 2013
               </div>
             </div>
           </motion.div>
@@ -54,7 +54,7 @@ export default function AboutPreview() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
           >
             <span className="text-sm font-semibold uppercase tracking-widest text-accent">
-              Chi Siamo
+              {homepageData.about.eyebrow}
             </span>
             <h2 className="font-black text-5xl text-primary leading-[1.1] mt-3">
               {homepageData.about.title}

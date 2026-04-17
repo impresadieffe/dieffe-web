@@ -1,29 +1,29 @@
 {
   "hero": {
-    "title": "Ristrutturiamo la tua casa con passione e professionalità",
-    "subtitle": "Da 20 anni trasformiamo appartamenti, bagni e cucine in Piemonte. Un unico interlocutore, zero pensieri.",
-    "cta_primary": "Richiedi un preventivo gratuito",
-    "cta_secondary": "Scopri i nostri lavori"
+    "title": "Rinnova i tuoi spazi",
+    "subtitle": "Ristrutturazioni complete, rifacimento tetti e facciate a Torino e provincia. Oltre 30 anni di esperienza edile e 500+ lavori consegnati con qualità e puntualità.",
+    "cta_primary": "Richiedi Preventivo Gratuito",
+    "cta_secondary": "Scopri i Servizi"
   },
   "about": {
-    "eyebrow": "Chi siamo",
-    "title": "Un'impresa edile a misura di cliente, radicata nel territorio piemontese",
-    "text": "Dieffe Ristrutturazioni nasce dall'esperienza ventennale di Franco Ferraris nel settore edile. Con sede a Moncalieri e operativa in tutto il Piemonte, la nostra impresa offre un servizio completo di ristrutturazione residenziale e commerciale: dalla semplice tinteggiatura alla ristrutturazione chiavi in mano. Lavoriamo con artigiani qualificati, materiali certificati e una gestione trasparente del cantiere. Ogni progetto è unico: ascoltiamo le esigenze del cliente e proponiamo soluzioni personalizzate, nel rispetto dei tempi e del budget concordato."
+    "eyebrow": "Chi Siamo",
+    "title": "Un'impresa con radici trentennali nel cuore di Torino",
+    "text": "Dieffe Ristrutturazioni nasce l'8 marzo 2013 dall'unione dell'esperienza edile di Andrea Addamo e della competenza manageriale di Daniela Faro. Con sede a Nichelino, siamo diventati un punto di riferimento per privati, amministratori di condominio e professionisti dell'area torinese, costruendo ogni giorno la nostra reputazione sulla qualità dei lavori e sulla fiducia dei clienti."
   },
   "stats": [
     {
-      "label": "Anni di esperienza",
-      "value": "20",
+      "label": "Anni di Esperienza",
+      "value": 30,
       "suffix": "+"
     },
     {
-      "label": "Lavori completati",
-      "value": "500",
+      "label": "Lavori Completati",
+      "value": 500,
       "suffix": "+"
     },
     {
-      "label": "Clienti soddisfatti",
-      "value": "300",
+      "label": "Clienti Soddisfatti",
+      "value": 400,
       "suffix": "+"
     }
   ]

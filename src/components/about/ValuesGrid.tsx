@@ -3,37 +3,17 @@
 import { motion } from 'framer-motion';
 import { Shield, Clock, FileText, type LucideIcon } from 'lucide-react';
 import Container from '@/components/ui/Container';
+import aboutData from '@/data/about.json';
 
-interface Value {
-  icon: LucideIcon;
-  title: string;
-  text: string;
-}
+const iconMap: Record<string, LucideIcon> = { Shield, Clock, FileText };
 
-const values: Value[] = [
-  {
-    icon: Shield,
-    title: 'Qualità Certificata',
-    text: 'Utilizziamo solo materiali di prima scelta, selezionati da fornitori certificati. Ogni lavoro è garantito per iscritto.',
-  },
-  {
-    icon: Clock,
-    title: 'Rispetto dei Tempi',
-    text: 'Consegniamo nei tempi concordati. Il tuo tempo è prezioso e noi lo rispettiamo con professionalità.',
-  },
-  {
-    icon: FileText,
-    title: 'Trasparenza Totale',
-    text: 'Preventivi dettagliati senza sorprese. Ogni voce di costo è chiara e documentata prima di iniziare i lavori.',
-  },
-];
-
-function ValueCard({ value, index }: { value: Value; index: number }) {
-  const Icon = value.icon;
+function ValueCard({ valore, index }: { valore: typeof aboutData.valori[number]; index: number }) {
+  const Icon = iconMap[valore.icona] ?? Shield;
   const number = String(index + 1).padStart(2, '0');
 
   return (
     <motion.div
+      className="h-full"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -41,6 +21,7 @@ function ValueCard({ value, index }: { value: Value; index: number }) {
     >
       <div
         className="group relative bg-white rounded-2xl p-8 overflow-hidden border border-gray-100
+          h-full flex flex-col
           shadow-[0_4px_24px_rgba(0,0,0,0.06)]
           hover:shadow-[0_32px_80px_rgba(0,0,0,0.12)]
           hover:-translate-y-2
@@ -63,10 +44,10 @@ function ValueCard({ value, index }: { value: Value; index: number }) {
         </div>
 
         <h3 className="relative z-10 font-black text-xl text-primary mt-8">
-          {value.title}
+          {valore.titolo}
         </h3>
-        <p className="relative z-10 text-gray-500 mt-3 leading-relaxed text-sm">
-          {value.text}
+        <p className="relative z-10 text-gray-500 mt-3 leading-relaxed text-sm flex-grow">
+          {valore.testo}
         </p>
       </div>
     </motion.div>
@@ -93,9 +74,9 @@ export default function ValuesGrid() {
           <div className="w-12 h-1 bg-accent mt-3 rounded-full" />
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
-          {values.map((value, i) => (
-            <ValueCard key={value.title} value={value} index={i} />
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16 items-stretch">
+          {aboutData.valori.map((valore, i) => (
+            <ValueCard key={valore.titolo} valore={valore} index={i} />
           ))}
         </div>
       </Container>

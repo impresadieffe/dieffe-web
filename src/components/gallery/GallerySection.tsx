@@ -18,9 +18,11 @@ const DIMS = [
 
 const ALL_LABEL = 'Tutti';
 
+const CATEGORY_ORDER = ['Tetti', 'Facciate', 'Ristrutturazioni', 'Interni', 'Esterni'];
+
 const CATEGORIES = [
   ALL_LABEL,
-  ...Array.from(new Set(galleryData.map((item) => item.category))),
+  ...CATEGORY_ORDER.filter((cat) => galleryData.some((item) => item.category === cat)),
 ];
 
 export default function GallerySection() {

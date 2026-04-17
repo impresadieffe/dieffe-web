@@ -1,103 +1,103 @@
 [
   {
     "id": 1,
-    "slug": "ristrutturazione-bagno",
-    "title": "Ristrutturazione Bagno",
-    "shortDescription": "Trasformiamo il tuo bagno in uno spazio moderno, funzionale e di design, con materiali di prima qualità.",
-    "fullDescription": "La ristrutturazione del bagno è uno degli interventi più richiesti e più impattanti per il valore e il comfort dell'abitazione. Il nostro team si occupa di ogni fase: dalla demolizione delle vecchie piastrelle alla posa di nuovi rivestimenti, dalla sostituzione degli impianti idraulici all'installazione di sanitari e rubinetteria di design. Collaboriamo con i principali marchi del settore e offriamo soluzioni personalizzate per ogni budget, garantendo finiture impeccabili e tempistiche rispettate.",
+    "slug": "rifacimento-tetti",
+    "title": "Rifacimento Tetti",
+    "shortDescription": "Rifacimento manto di copertura, impermeabilizzazione e coibentazione tetti a Torino e provincia.",
+    "fullDescription": "Specialisti nel rifacimento tetto a Torino e in tutta la provincia, Dieffe Ristrutturazioni esegue interventi completi sul manto di copertura con oltre 30 anni di esperienza. Dalla rimozione del vecchio materiale alla posa di tegole, coppi o lamiere, ogni fase è curata con la massima attenzione. L'impermeabilizzazione tetti a Torino è garantita da guaine certificate di prima qualità. Offriamo anche coibentazione del sottotetto per migliorare l'efficienza energetica dell'edificio, riducendo i consumi e aumentando il comfort abitativo in ogni stagione.",
     "keyPoints": [
-      "Demolizione e smaltimento materiali a norma",
-      "Posa rivestimenti in gres porcellanato e ceramica",
-      "Sostituzione impianto idraulico e sanitari",
-      "Installazione box doccia, vasche e rubinetteria design"
+      "Smontaggio vecchio manto e smaltimento a norma",
+      "Posa guaine impermeabilizzanti certificate",
+      "Coibentazione e isolamento sottotetto",
+      "Tegole, coppi e lamiere per ogni stile architettonico"
     ],
-    "icon": "Bath",
-    "imageUrl": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    "icon": "Home",
+    "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
     "order": 1,
     "active": true
   },
   {
     "id": 2,
-    "slug": "ristrutturazione-cucina",
-    "title": "Ristrutturazione Cucina",
-    "shortDescription": "Progettiamo e realizziamo cucine su misura, rinnovando pavimenti, rivestimenti e impianti con cura artigianale.",
-    "fullDescription": "La cucina è il cuore della casa: un ambiente che deve coniugare funzionalità, estetica e praticità. Dieffe Ristrutturazioni offre un servizio completo che include la rimozione delle vecchie strutture, la posa di nuovi pavimenti e rivestimenti, il rifacimento dell'impianto elettrico e idraulico, fino all'installazione di mobili e top cucina. Ogni progetto viene pianificato nei minimi dettagli per ridurre al minimo i disagi e consegnare un ambiente perfettamente rifinito.",
+    "slug": "facciate-cappotti",
+    "title": "Facciate e Cappotti Termici",
+    "shortDescription": "Rifacimento facciate e cappotto termico a Torino con materiali ecosostenibili e detrazioni fiscali Ecobonus.",
+    "fullDescription": "Il rifacimento facciata a Torino e provincia è uno degli interventi più efficaci per valorizzare l'immobile e ridurre i consumi energetici. Dieffe Ristrutturazioni realizza cappotti termici a Torino con sistemi certificati che garantiscono un isolamento termico superiore, abbattendo i costi di riscaldamento e climatizzazione. Utilizziamo materiali ecosostenibili e di prima scelta, nel rispetto delle normative vigenti. Supportiamo i clienti nell'accesso alle detrazioni fiscali Ecobonus a Torino, rendendo l'investimento ancora più conveniente. Ogni cantiere è seguito con cura dalla progettazione alla consegna finale.",
     "keyPoints": [
-      "Progettazione e layout personalizzato",
-      "Posa pavimenti e rivestimenti in ceramica o gres",
-      "Rifacimento impianti elettrico e idraulico",
-      "Installazione mobili, elettrodomestici e top in pietra"
+      "Cappotto termico con materiali certificati e alta performance",
+      "Risanamento e rifacimento facciate esterne",
+      "Materiali ecosostenibili e finiture di pregio",
+      "Consulenza detrazioni fiscali Ecobonus e Bonus 110%"
     ],
-    "icon": "UtensilsCrossed",
-    "imageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    "icon": "Building2",
+    "imageUrl": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
     "order": 2,
     "active": true
   },
   {
     "id": 3,
-    "slug": "pavimentazioni",
-    "title": "Pavimentazioni",
-    "shortDescription": "Posa e rifinitura di pavimenti in gres, parquet, pietra naturale e resina per ambienti residenziali e commerciali.",
-    "fullDescription": "La scelta del pavimento determina il carattere di ogni ambiente. Dieffe Ristrutturazioni vanta una lunga esperienza nella posa di ogni tipologia di pavimento: gres porcellanato, ceramica, parquet in legno massello e laminato, pietra naturale, resina e microcemento. Lavoriamo su superfici di qualsiasi dimensione, garantendo una preparazione accurata del sottofondo, livellamenti precisi e fughe impeccabili. Eseguiamo anche il ripristino e la lucidatura di pavimenti esistenti.",
+    "slug": "ristrutturazioni-complete",
+    "title": "Ristrutturazioni Complete",
+    "shortDescription": "Ristrutturazione appartamento e casa a Torino chiavi in mano: un unico interlocutore, zero pensieri.",
+    "fullDescription": "La ristrutturazione appartamento a Torino e la ristrutturazione casa a Torino provincia sono il cuore dell'attività di Dieffe Ristrutturazioni. Offriamo un servizio chiavi in mano completo: dall'analisi delle esigenze alla progettazione, dalla direzione lavori alla coordinazione delle maestranze, fino alla gestione delle pratiche burocratiche. Con 500+ lavori completati, siamo il partner affidabile per privati che desiderano rinnovare la propria abitazione a Torino senza stress. La ristrutturazione chiavi in mano Torino di Dieffe si conclude sempre con garanzia scritta e trasparenza totale sui costi.",
     "keyPoints": [
-      "Posa gres, ceramica e pietra naturale",
-      "Installazione parquet in legno massello e laminato",
-      "Applicazione di resina e microcemento",
-      "Levigatura e lucidatura pavimenti esistenti"
+      "Progettazione e direzione lavori personalizzata",
+      "Coordinamento di tutte le maestranze specializzate",
+      "Gestione pratiche burocratiche CILA e SCIA",
+      "Consegna chiavi in mano con garanzia post-lavori"
     ],
-    "icon": "Layers",
-    "imageUrl": "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800&q=80",
+    "icon": "Hammer",
+    "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
     "order": 3,
     "active": true
   },
   {
     "id": 4,
-    "slug": "impianti-elettrici",
-    "title": "Impianti Elettrici",
-    "shortDescription": "Realizzazione e adeguamento di impianti elettrici civili a norma CEI, con certificazione finale e massima sicurezza.",
-    "fullDescription": "Un impianto elettrico sicuro e a norma è fondamentale per la tutela di persone e proprietà. I nostri elettricisti qualificati eseguono nuovi impianti elettrici civili e industriali, rifacimenti completi, adeguamenti normativi e manutenzione. Ogni intervento viene progettato nel rispetto delle norme CEI vigenti e si conclude con il rilascio della dichiarazione di conformità. Installiamo anche sistemi di domotica, videocitofonia, antifurto e punti di ricarica per veicoli elettrici.",
+    "slug": "nuove-costruzioni",
+    "title": "Nuove Costruzioni",
+    "shortDescription": "Costruzioni edili residenziali a Torino e provincia: dalla posa delle fondamenta alla consegna dell'immobile.",
+    "fullDescription": "Le costruzioni edili a Torino di Dieffe Ristrutturazioni si distinguono per solidità, precisione e rispetto delle normative più recenti. La nostra impresa costruzioni a Torino provincia realizza edifici residenziali su progetto, con strutture in cemento armato e muratura tradizionale di qualità superiore. Ogni costruzione residenziale a Torino viene eseguita in conformità alle normative antisismiche vigenti, garantendo sicurezza e durabilità nel tempo. Gestiamo l'intero processo costruttivo: dalla progettazione esecutiva alla gestione delle forniture, dalla direzione tecnica del cantiere al collaudo finale.",
     "keyPoints": [
-      "Nuovi impianti a norma CEI con dichiarazione di conformità",
-      "Adeguamento e rifacimento impianti esistenti",
-      "Installazione quadri elettrici, prese e punti luce",
-      "Domotica, videocitofonia e ricarica veicoli elettrici"
+      "Costruzioni residenziali su progetto architettonico",
+      "Strutture in cemento armato e muratura certificata",
+      "Piena conformità alle normative antisismiche",
+      "Gestione completa del processo costruttivo"
     ],
-    "icon": "Zap",
-    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "icon": "Building",
+    "imageUrl": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
     "order": 4,
     "active": true
   },
   {
     "id": 5,
-    "slug": "tinteggiatura-intonaci",
-    "title": "Tinteggiatura e Intonaci",
-    "shortDescription": "Tinteggiatura professionale di interni ed esterni, risanamento umidità, intonaci e finiture decorative personalizzate.",
-    "fullDescription": "Le pareti sono la superficie più visibile di ogni ambiente: una tinteggiatura ben eseguita cambia radicalmente l'aspetto di una stanza. Dieffe Ristrutturazioni esegue tinteggiature di interni ed esterni con pitture di alta qualità, trattamenti anti-umidità e anti-muffa, stucchi decorativi, velature e spatolati. Prima di ogni intervento prepariamo accuratamente le superfici: ripristino di crepe, rasature, applicazione di fondi aggrappanti e impregnanti.",
+    "slug": "bioedilizia",
+    "title": "Bioedilizia",
+    "shortDescription": "Bioedilizia a Torino: costruzioni in legno e materiali naturali per abitare in modo sostenibile ed efficiente.",
+    "fullDescription": "La bioedilizia a Torino rappresenta il futuro dell'edilizia sostenibile, e Dieffe Ristrutturazioni è in prima linea in questo settore in crescita. Realizziamo costruzioni in legno a Torino e provincia con materiali certificati, naturali ed ecosostenibili che garantiscono altissima efficienza energetica in classe A. L'edilizia sostenibile a Torino di Dieffe coniuga il rispetto per l'ambiente con il massimo comfort abitativo: le case in legno a Torino sono warm in inverno, fresche in estate e caratterizzate da un impatto ambientale ridotto rispetto alle costruzioni tradizionali. Scegliere la bioedilizia significa investire nel futuro.",
     "keyPoints": [
-      "Tinteggiatura interni ed esterni con pitture traspiranti",
-      "Trattamenti anti-umidità e risanamento muri",
-      "Stucchi decorativi, velature e spatolati veneziani",
-      "Intonaci tradizionali e rasature a gesso"
+      "Costruzioni in legno certificato FSC e PEFC",
+      "Materiali naturali ed ecosostenibili a basso impatto",
+      "Alta efficienza energetica, classe A e superiori",
+      "Riduzione significativa delle emissioni di CO₂"
     ],
-    "icon": "PaintRoller",
-    "imageUrl": "https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=800&q=80",
+    "icon": "Leaf",
+    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
     "order": 5,
     "active": true
   },
   {
     "id": 6,
-    "slug": "ristrutturazione-completa",
-    "title": "Ristrutturazione Completa",
-    "shortDescription": "Gestiamo l'intero processo di ristrutturazione chiavi in mano: un unico interlocutore per ogni aspetto del cantiere.",
-    "fullDescription": "La ristrutturazione completa è la soluzione ideale per chi desidera rinnovare l'intera abitazione senza dover coordinare diversi artigiani. Dieffe Ristrutturazioni offre un servizio chiavi in mano che comprende la progettazione, la direzione lavori e l'esecuzione di tutte le opere: demolizioni, muratura, impianti, pavimenti, rivestimenti, tinteggiatura e finiture. Ci occupiamo anche delle pratiche burocratiche presso il Comune e della gestione delle agevolazioni fiscali come il Bonus Ristrutturazioni 50% e l'Ecobonus.",
+    "slug": "impianti",
+    "title": "Impianti Elettrici e Idraulici",
+    "shortDescription": "Impianti elettrici e idraulici a Torino con certificazioni di conformità e interventi su misura per ogni esigenza.",
+    "fullDescription": "Gli impianti elettrici a Torino e gli impianti idraulici a Torino provincia realizzati da Dieffe Ristrutturazioni sono progettati e installati nel pieno rispetto delle normative tecniche vigenti. I nostri tecnici qualificati eseguono impianti elettrici civili a norma CEI con rilascio della dichiarazione di conformità, adeguamenti di impianti esistenti e nuovi allacciamenti. Sul fronte idraulico, realizziamo impianti idraulici e termoidraulici certificati a Torino per riscaldamento, sanitari e climatizzazione. Ogni intervento si conclude con documentazione completa e certificazioni in regola, per la massima tranquillità del cliente.",
     "keyPoints": [
-      "Progettazione, direzione lavori e coordinamento cantiere",
-      "Gestione pratiche burocratiche e CILA/SCIA",
-      "Consulenza agevolazioni fiscali: Bonus 50% ed Ecobonus",
-      "Consegna chiavi in mano con garanzia post-lavori"
+      "Impianti elettrici civili a norma CEI con dichiarazione conformità",
+      "Impianti idraulici e termoidraulici certificati",
+      "Certificazioni e dichiarazioni di conformità rilasciate",
+      "Adeguamento e rifacimento impianti esistenti"
     ],
-    "icon": "Home",
-    "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    "icon": "Zap",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
     "order": 6,
     "active": true
   }
