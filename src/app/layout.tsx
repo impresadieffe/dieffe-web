@@ -6,6 +6,8 @@ import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import CookieBanner from "@/components/ui/CookieBanner";
 import JsonLd from "@/components/JsonLd";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -72,6 +74,8 @@ export default function RootLayout({
         <Footer />
         <CookieBanner />
         <ScrollToTop />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
