@@ -34,7 +34,7 @@ export default function AboutPreview() {
               style={{ aspectRatio: '4/5' }}
             >
               <Image
-                src="/images/hero/chi-siamo.JPG"
+                src="/images/hero/chi-siamo.jpg"
                 alt="Cantiere Dieffe Ristrutturazioni"
                 fill
                 className="object-cover"

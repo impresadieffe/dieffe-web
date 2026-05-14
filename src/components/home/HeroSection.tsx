@@ -26,7 +26,7 @@ export default function HeroSection() {
         {/* Background image — very dark, almost a texture */}
         <div className="absolute inset-0">
           <Image
-            src="/images/hero/hero_01.JPG"
+            src="/images/hero/hero_01.jpg"
             alt=""
             fill
             className="object-cover opacity-50"

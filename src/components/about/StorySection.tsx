@@ -89,7 +89,7 @@ export default function StorySection() {
                 style={{ aspectRatio: '3/4' }}
               >
                 <Image
-                  src="/images/team/chi-siamo01.JPG"
+                  src="/images/team/chi-siamo01.jpg"
                   alt="Team Dieffe Ristrutturazioni al lavoro"
                   fill
                   className="object-cover"
