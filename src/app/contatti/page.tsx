@@ -5,9 +5,9 @@ import ContactInfo from '@/components/contact/ContactInfo';
 import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contatti | Dieffe Ristrutturazioni',
+  title: 'Contatti | Preventivo Gratuito Torino',
   description:
-    'Contatta Dieffe Ristrutturazioni per un preventivo gratuito. Ristrutturazioni a Torino e Piemonte. Rispondiamo entro 24 ore.',
+    'Richiedi un preventivo gratuito per la tua ristrutturazione a Torino e Nichelino. Chiamaci al +39 349 319 1144 o scrivi: rispondiamo entro 24 ore.',
 };
 
 export default function ContattiPage() {

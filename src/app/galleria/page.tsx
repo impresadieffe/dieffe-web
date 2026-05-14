@@ -3,9 +3,9 @@ import PageHero from '@/components/ui/PageHero';
 import GallerySection from '@/components/gallery/GallerySection';
 
 export const metadata: Metadata = {
-  title: 'Galleria Lavori | Dieffe Ristrutturazioni',
+  title: 'Galleria Lavori | Cantieri a Torino e Provincia',
   description:
-    'Sfoglia i nostri lavori di ristrutturazione: bagni, cucine, pavimenti e ristrutturazioni complete a Torino e Piemonte. Qualità che si vede.',
+    'Foto dei nostri cantieri: rifacimento tetti, facciate, ristrutturazioni interni ed esterni realizzati a Torino e provincia. Vedi la qualità dei lavori Dieffe.',
 };
 
 export default function GalleriaPage() {

@@ -175,14 +175,14 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Link
-              href="/privacy-policy"
+              href="/privacy"
               className="text-xs text-white/50 hover:text-white transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <span className="text-white/20">·</span>
             <Link
-              href="/cookie-policy"
+              href="/cookie"
               className="text-xs text-white/50 hover:text-white transition-colors duration-200"
             >
               Cookie Policy

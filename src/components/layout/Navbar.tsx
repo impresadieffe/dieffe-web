@@ -20,17 +20,21 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const forceSolid = pathname === '/privacy' || pathname === '/cookie';
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const isSolid = forceSolid || scrolled;
+
   return (
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 h-16 md:h-20 transition-all duration-300 ${
-          scrolled
+          isSolid
             ? 'bg-white/95 backdrop-blur-xl shadow-md border-b border-black/5'
             : 'bg-transparent border-b border-transparent'
         }`}
@@ -44,7 +48,7 @@ export default function Navbar() {
               alt="Dieffe Ristrutturazioni"
               fill
               className={`object-contain object-left transition-opacity duration-300 ${
-                scrolled ? 'opacity-0' : 'opacity-100'
+                isSolid ? 'opacity-0' : 'opacity-100'
               }`}
               priority
             />
@@ -53,7 +57,7 @@ export default function Navbar() {
               alt="Dieffe Ristrutturazioni"
               fill
               className={`object-contain object-left transition-opacity duration-300 ${
-                scrolled ? 'opacity-100' : 'opacity-0'
+                isSolid ? 'opacity-100' : 'opacity-0'
               }`}
               priority
             />
@@ -69,8 +73,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative py-1 text-sm font-medium transition-colors duration-200 ${
                     isActive
-                      ? scrolled ? 'text-primary' : 'text-white'
-                      : scrolled
+                      ? isSolid ? 'text-primary' : 'text-white'
+                      : isSolid
                         ? 'text-primary/60 hover:text-primary'
                         : 'text-white/70 hover:text-white'
                   }`}
@@ -111,17 +115,17 @@ export default function Navbar() {
             >
               <span
                 className={`block h-0.5 w-6 rounded-full origin-center transition-all duration-300 ${
-                  scrolled ? 'bg-primary' : 'bg-white'
+                  isSolid ? 'bg-primary' : 'bg-white'
                 } ${menuOpen ? 'rotate-45 translate-y-2' : ''}`}
               />
               <span
                 className={`block h-0.5 w-6 rounded-full origin-center transition-all duration-200 ${
-                  scrolled ? 'bg-primary' : 'bg-white'
+                  isSolid ? 'bg-primary' : 'bg-white'
                 } ${menuOpen ? 'opacity-0 scale-x-0' : ''}`}
               />
               <span
                 className={`block h-0.5 w-6 rounded-full origin-center transition-all duration-300 ${
-                  scrolled ? 'bg-primary' : 'bg-white'
+                  isSolid ? 'bg-primary' : 'bg-white'
                 } ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
               />
             </button>

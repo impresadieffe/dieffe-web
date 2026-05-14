@@ -5,9 +5,9 @@ import ValuesGrid from '@/components/about/ValuesGrid';
 import CTABanner from '@/components/home/CTABanner';
 
 export const metadata: Metadata = {
-  title: 'Chi Siamo | Dieffe Ristrutturazioni',
+  title: 'Chi Siamo | Impresa Edile dal 2013',
   description:
-    'Scopri la storia di Dieffe Ristrutturazioni: 30 anni di esperienza nelle ristrutturazioni a Torino e provincia. Fondati nel 2013 a Moncalieri. Qualità, puntualità e trasparenza.',
+    'La storia di Dieffe Ristrutturazioni: impresa edile fondata nel 2013 a Nichelino, Torino. 30 anni di esperienza artigianale, qualità certificata e trasparenza in ogni cantiere.',
 };
 
 export default function ChiSiamoPage() {
