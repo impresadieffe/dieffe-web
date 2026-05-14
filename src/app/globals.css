@@ -143,3 +143,21 @@ html {
     min-height: 220px;
   }
 }
+
+/* ============================================================
+   === OTTIMIZZAZIONI SCROLL E RENDERING MOBILE ===
+   ============================================================ */
+@media (max-width: 768px) {
+  body {
+    /* Disabilita over-scroll bounce per uno scroll più fluido */
+    overscroll-behavior-y: none;
+  }
+}
+
+/* GPU compositing per elementi animati pesanti */
+.gpu-accelerate {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -17,6 +18,15 @@ const titleLines = [
 export default function HeroSection() {
   const stats = homepageData.stats;
 
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    const delay = isMobile ? 300 : 0;
+    const timer = setTimeout(() => setShouldAnimate(true), delay);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     /*
      * min-h-[100dvh] = viewport dinamico su iOS (evita jump con address bar)
@@ -25,7 +35,7 @@ export default function HeroSection() {
     <section className="relative min-h-[100dvh] md:min-h-screen flex items-center bg-background">
 
       {/* Layer sfondo — overflow-hidden isolato qui */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden gpu-accelerate">
 
         {/* Immagine di sfondo */}
         <div className="absolute inset-0">
@@ -35,7 +45,8 @@ export default function HeroSection() {
             fill
             className="object-cover opacity-50"
             priority
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 100vw"
+            quality={75}
             aria-hidden="true"
           />
         </div>
@@ -74,7 +85,7 @@ export default function HeroSection() {
           {/* Eyebrow badge — ridotto su mobile */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
-            animate={{ opacity: 1, x: 0 }}
+            animate={shouldAnimate ? { opacity: 1, x: 0 } : { opacity: 0, x: -24 }}
             transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
           >
             <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-accent/10 text-accent border border-accent/40">
@@ -82,13 +93,6 @@ export default function HeroSection() {
             </span>
           </motion.div>
 
-          {/*
-           * Titolo hero
-           * Mobile  : ~2.5rem  (ridotto da 3.75rem per non riempire lo schermo)
-           * sm 640px: 4.5rem
-           * md 768px: 6rem     (DESKTOP — invariato)
-           * lg 1024px: 8rem    (DESKTOP — invariato)
-           */}
           {/*
            * Titolo hero — GRANDE e d'impatto anche su mobile (comportamento voluto)
            * clamp(2.75rem, 11vw, 3.75rem): 41px @ 375px, 48px @ 430px, max 60px
@@ -100,7 +104,7 @@ export default function HeroSection() {
                 <motion.div
                   className="flex flex-wrap gap-x-[0.25em]"
                   initial="hidden"
-                  animate="visible"
+                  animate={shouldAnimate ? 'visible' : 'hidden'}
                   variants={{
                     visible: {
                       transition: {
@@ -135,7 +139,7 @@ export default function HeroSection() {
           <motion.p
             className="text-white/60 text-[15px] md:text-xl max-w-lg mt-5 sm:mt-8 leading-relaxed"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={shouldAnimate ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             {homepageData.hero.subtitle}
@@ -145,7 +149,7 @@ export default function HeroSection() {
           <motion.div
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-7 sm:mt-10"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={shouldAnimate ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: 1 }}
           >
             <Link
@@ -170,7 +174,7 @@ export default function HeroSection() {
           <motion.div
             className="flex items-center gap-0 mt-10 sm:mt-16"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={shouldAnimate ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
           >
             {stats.map((stat, i) => (
