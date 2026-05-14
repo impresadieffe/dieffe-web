@@ -11,21 +11,17 @@ export const SERVIZI = [
 ] as const;
 
 export const contactSchema = z.object({
-  nome: z.string().min(2, 'Nome obbligatorio'),
-  cognome: z.string().min(2, 'Cognome obbligatorio'),
+  nome: z.string().min(2, 'Nome troppo breve'),
+  cognome: z.string().min(2, 'Cognome troppo breve'),
   email: z.string().email('Email non valida'),
   telefono: z
     .string()
     .optional()
-    .refine(
-      (v) => !v || /^[+\d\s\-()/]{7,15}$/.test(v),
-      { message: 'Numero di telefono non valido' },
-    ),
-  servizio: z.preprocess(
-    (v) => (v === '' ? undefined : v),
-    z.enum(SERVIZI).optional(),
-  ),
-  messaggio: z.string().min(10, 'Messaggio troppo breve'),
+    .refine((v) => !v || /^[+\d\s\-()/]{7,15}$/.test(v), {
+      message: 'Numero di telefono non valido',
+    }),
+  servizio: z.string().optional(),
+  messaggio: z.string().min(10, 'Messaggio troppo breve (min. 10 caratteri)'),
   privacy: z
     .boolean()
     .refine((v) => v === true, { message: 'Devi accettare la privacy policy' }),
