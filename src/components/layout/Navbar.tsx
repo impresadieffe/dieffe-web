@@ -35,7 +35,12 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen]);
 
-  const isSolid = forceSolid || scrolled;
+  /*
+   * Quando il drawer è aperto, forza la navbar solida.
+   * Evita il compositing glitch tra navbar trasparente (z-50) e
+   * drawer (z-50) che animano contemporaneamente sullo stesso layer.
+   */
+  const isSolid = forceSolid || scrolled || menuOpen;
 
   return (
     <>
@@ -155,9 +160,9 @@ export default function Navbar() {
               aria-hidden="true"
             />
 
-            {/* Drawer navy — slide da destra */}
+            {/* Drawer bianco — slide da destra */}
             <motion.div
-              className="fixed top-0 right-0 bottom-0 z-50 w-[85vw] max-w-[360px] bg-[#1E3A7B] flex flex-col shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 z-50 w-[85vw] max-w-[360px] bg-white flex flex-col shadow-2xl"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -168,15 +173,15 @@ export default function Navbar() {
               style={{ height: '100dvh' }}
             >
 
-              {/* Header drawer: logo bianco + bottone chiusura */}
-              <div className="flex items-center justify-between px-6 py-5 border-b border-white/10 shrink-0">
+              {/* Header drawer: logo colorato + bottone chiusura */}
+              <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 shrink-0">
                 <Link
                   href="/"
                   className="relative h-10 w-[130px]"
                   onClick={() => setMenuOpen(false)}
                 >
                   <Image
-                    src="/logo-bianco.svg"
+                    src="/logo-colorato.svg"
                     alt="Dieffe Ristrutturazioni"
                     fill
                     className="object-contain object-left"
@@ -184,7 +189,7 @@ export default function Navbar() {
                 </Link>
                 <button
                   onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-center w-10 h-10 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150"
+                  className="flex items-center justify-center w-10 h-10 rounded-full text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors duration-150"
                   aria-label="Chiudi menu"
                 >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -212,16 +217,16 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setMenuOpen(false)}
-                        className={`flex items-center justify-between px-6 py-[18px] text-[18px] font-medium border-b border-white/[0.08] transition-colors duration-150 ${
+                        className={`flex items-center justify-between px-6 py-[18px] text-[18px] font-medium border-b border-gray-100 transition-colors duration-150 ${
                           isActive
-                            ? 'text-white bg-white/[0.06] border-l-[3px] border-l-accent pl-[21px]'
-                            : 'text-white/80 hover:text-white hover:bg-white/[0.04]'
+                            ? 'text-primary bg-primary/5 border-l-[3px] border-l-accent pl-[21px]'
+                            : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                         }`}
                       >
                         <span>{link.label}</span>
                         <ChevronRight
                           size={16}
-                          className="text-white/40 shrink-0"
+                          className="text-gray-300 shrink-0"
                         />
                       </Link>
                     </motion.div>
@@ -230,7 +235,7 @@ export default function Navbar() {
               </nav>
 
               {/* Footer sticky: CTA + contatti */}
-              <div className="shrink-0 px-6 py-6 border-t border-white/10 bg-[#1E3A7B]">
+              <div className="shrink-0 px-6 py-6 border-t border-gray-100 bg-white">
                 <Link
                   href="/contatti"
                   onClick={() => setMenuOpen(false)}
@@ -243,14 +248,14 @@ export default function Navbar() {
                 <div className="mt-4 flex flex-col gap-2 items-center">
                   <a
                     href={`tel:${siteData.phone.replace(/\s/g, '')}`}
-                    className="flex items-center gap-2 text-white/60 hover:text-white/90 text-[13px] transition-colors duration-150"
+                    className="flex items-center gap-2 text-gray-400 hover:text-gray-700 text-[13px] transition-colors duration-150"
                   >
                     <Phone size={13} />
                     {siteData.phone}
                   </a>
                   <a
                     href={`mailto:${siteData.email}`}
-                    className="flex items-center gap-2 text-white/60 hover:text-white/90 text-[13px] transition-colors duration-150"
+                    className="flex items-center gap-2 text-gray-400 hover:text-gray-700 text-[13px] transition-colors duration-150"
                   >
                     <Mail size={13} />
                     {siteData.email}
