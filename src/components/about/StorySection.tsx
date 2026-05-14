@@ -16,9 +16,9 @@ export default function StorySection() {
   const paragraphs = [storia.paragrafo1, storia.paragrafo2, storia.paragrafo3];
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-16 md:py-32 bg-white">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
 
           {/* Colonna sinistra — testo + timeline */}
           <motion.div
@@ -27,15 +27,19 @@ export default function StorySection() {
             animate={leftInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
           >
-            <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-accent">
               La Nostra Storia
             </span>
-            <h2 className="font-black text-5xl text-primary leading-[1.1] mt-3">
+            {/*
+             * Titolo: text-3xl mobile (~30px), text-5xl desktop (INVARIATO)
+             * Evita le 4-5 righe su iPhone SE con titoli lunghi
+             */}
+            <h2 className="font-black text-3xl md:text-5xl text-primary leading-[1.15] md:leading-[1.1] mt-3">
               {storia.titolo}
             </h2>
 
             {paragraphs.map((p, i) => (
-              <p key={i} className="text-gray-600 leading-relaxed text-lg mt-4">
+              <p key={i} className="text-gray-600 leading-relaxed text-[15px] md:text-lg mt-4">
                 {p}
               </p>
             ))}

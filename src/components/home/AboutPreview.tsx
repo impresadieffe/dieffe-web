@@ -19,9 +19,16 @@ export default function AboutPreview() {
   const inView = useInView(contentRef, { once: true, margin: '-80px' });
 
   return (
-    <section className="py-32 bg-[#F5F5F3]">
+    /*
+     * py-16 mobile → py-32 desktop
+     */
+    <section className="py-16 md:py-32 bg-[#F5F5F3]">
       <Container>
-        <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        {/*
+         * Su mobile: colonna singola, gap ridotto
+         * Su lg: due colonne con gap generoso (invariato)
+         */}
+        <div ref={contentRef} className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* Colonna sinistra — immagine */}
           <motion.div
@@ -38,6 +45,7 @@ export default function AboutPreview() {
                 alt="Cantiere Dieffe Ristrutturazioni"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
 
               {/* Badge */}
@@ -53,17 +61,23 @@ export default function AboutPreview() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.23, 1, 0.32, 1] }}
           >
-            <span className="text-sm font-semibold uppercase tracking-widest text-accent">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-accent">
               {homepageData.about.eyebrow}
             </span>
-            <h2 className="font-black text-5xl text-primary leading-[1.1] mt-3">
+
+            {/*
+             * Titolo: text-3xl mobile (~30px), text-5xl desktop
+             * Ridotto da text-5xl per evitare 4 righe su iPhone SE
+             */}
+            <h2 className="font-black text-3xl md:text-5xl text-primary leading-[1.15] md:leading-[1.1] mt-3">
               {homepageData.about.title}
             </h2>
-            <p className="text-gray-600 leading-relaxed text-lg mt-6">
+
+            <p className="text-gray-600 leading-relaxed text-base md:text-lg mt-4 sm:mt-6">
               {homepageData.about.text}
             </p>
 
-            <ul className="mt-10 flex flex-col gap-0">
+            <ul className="mt-6 md:mt-10 flex flex-col gap-0">
               {keyPoints.map((point, i) => (
                 <motion.li
                   key={point}
@@ -77,14 +91,14 @@ export default function AboutPreview() {
                   className="flex gap-3 items-center border-l-2 border-accent pl-4 py-1 mb-4"
                 >
                   <CheckCircle2 size={18} className="text-accent shrink-0" />
-                  <span className="font-medium text-gray-700">{point}</span>
+                  <span className="font-medium text-gray-700 text-sm sm:text-base">{point}</span>
                 </motion.li>
               ))}
             </ul>
 
             <Link
               href="/chi-siamo"
-              className="inline-flex items-center gap-2 mt-10 border-2 border-[#00AEEF] text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white rounded-full px-8 py-3 font-semibold text-sm transition-all duration-300"
+              className="inline-flex items-center gap-2 mt-8 md:mt-10 border-2 border-[#00AEEF] text-[#00AEEF] hover:bg-[#00AEEF] hover:text-white rounded-full px-7 py-3 sm:px-8 font-semibold text-sm transition-all duration-300"
             >
               Scopri la nostra storia
               <ArrowRight className="w-4 h-4" />

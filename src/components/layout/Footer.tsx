@@ -47,16 +47,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
           {/* Colonna 1 — Brand */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 items-center sm:items-start">
             <Link href="/" className="relative h-20 w-[200px] select-none">
               <Image
                 src="/logo-bianco.svg"
                 alt="Dieffe Ristrutturazioni"
                 fill
-                className="object-contain object-left"
+                className="object-contain object-center sm:object-left"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-white/60 text-center sm:text-left">
               Impresa edile professionale con sede a Nichelino (TO). Trasformiamo
               i tuoi spazi con qualità artigianale e materiali di prima scelta.
             </p>
@@ -83,14 +83,14 @@ export default function Footer() {
           </div>
 
           {/* Colonna 2 — Navigazione */}
-          <div className="flex flex-col gap-4">
-            <div>
-              <div className="h-px w-16 bg-accent mb-3" />
-              <h3 className="text-sm font-semibold text-white">
+          <div className="flex flex-col gap-4 items-center sm:items-start">
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="h-px w-16 bg-accent mb-3 mx-auto sm:mx-0" />
+              <h3 className="text-sm font-semibold text-white text-center sm:text-left">
                 Navigazione
               </h3>
             </div>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 items-center sm:items-start">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -105,14 +105,14 @@ export default function Footer() {
           </div>
 
           {/* Colonna 3 — Servizi */}
-          <div className="flex flex-col gap-4">
-            <div>
-              <div className="h-px w-16 bg-accent mb-3" />
-              <h3 className="text-sm font-semibold text-white">
+          <div className="flex flex-col gap-4 items-center sm:items-start">
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="h-px w-16 bg-accent mb-3 mx-auto sm:mx-0" />
+              <h3 className="text-sm font-semibold text-white text-center sm:text-left">
                 I Nostri Servizi
               </h3>
             </div>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-2 items-center sm:items-start">
               {services.map((s) => (
                 <li key={s.slug}>
                   <Link
@@ -127,19 +127,19 @@ export default function Footer() {
           </div>
 
           {/* Colonna 4 — Contatti */}
-          <div className="flex flex-col gap-4">
-            <div>
-              <div className="h-px w-16 bg-accent mb-3" />
-              <h3 className="text-sm font-semibold text-white">
+          <div className="flex flex-col gap-4 items-center sm:items-start">
+            <div className="flex flex-col items-center sm:items-start">
+              <div className="h-px w-16 bg-accent mb-3 mx-auto sm:mx-0" />
+              <h3 className="text-sm font-semibold text-white text-center sm:text-left">
                 Contatti
               </h3>
             </div>
             <ul className="flex flex-col gap-3">
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="mt-0.5 shrink-0 text-accent" />
-                <span className="text-sm text-white/70">{siteData.address}</span>
+              <li className="flex items-center justify-center sm:justify-start gap-3">
+                <MapPin size={16} className="shrink-0 text-accent" />
+                <span className="text-sm text-white/70 text-center sm:text-left">{siteData.address}</span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center justify-center sm:justify-start gap-3">
                 <Phone size={16} className="shrink-0 text-accent" />
                 <a
                   href={`tel:${siteData.phone.replace(/\s/g, '')}`}
@@ -148,7 +148,7 @@ export default function Footer() {
                   {siteData.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center justify-center sm:justify-start gap-3">
                 <Mail size={16} className="shrink-0 text-accent" />
                 <a
                   href={`mailto:${siteData.email}`}
@@ -157,8 +157,8 @@ export default function Footer() {
                   {siteData.email}
                 </a>
               </li>
-              <li className="flex items-start gap-3">
-                <Clock size={16} className="mt-0.5 shrink-0 text-accent" />
+              <li className="flex items-center justify-center sm:justify-start gap-3">
+                <Clock size={16} className="shrink-0 text-accent" />
                 <span className="text-sm text-white/70">{siteData.orari}</span>
               </li>
             </ul>

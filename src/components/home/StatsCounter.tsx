@@ -32,26 +32,33 @@ function StatItem({ stat, delay }: { stat: Stat; delay: number }) {
   return (
     <motion.div
       ref={ref}
-      className="flex flex-col items-center text-center py-16 px-8"
+      /*
+       * Padding
+       * mobile  — py-6 px-2  (da py-16 px-8: troppo spazio su 3 righe staccate)
+       * desktop — py-16 px-8 (INVARIATO)
+       */
+      className="flex flex-col items-center text-center py-6 px-2 sm:py-16 sm:px-8"
       initial={{ opacity: 0, y: 32 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay, ease: [0.23, 1, 0.32, 1] }}
     >
-      {/* Unica linea accent sopra il numero */}
-      <div className="w-8 h-[2px] bg-accent mb-8 rounded-full" />
+      <div className="w-6 sm:w-8 h-[2px] bg-accent mb-4 sm:mb-8 rounded-full" />
 
-      {/* Numero enorme */}
+      {/*
+       * Numero
+       * mobile  — 2rem   (~32px, compatto in 3 colonne)
+       * desktop — 6rem   (text-8xl, INVARIATO)
+       */}
       <div className="flex items-end leading-none">
-        <span className="font-black text-8xl text-white tabular-nums leading-none">
+        <span className="font-black text-[2rem] sm:text-8xl text-white tabular-nums leading-none">
           {count}
         </span>
-        <span className="font-black text-5xl text-accent ml-1 mb-1 leading-none">
+        <span className="font-black text-xl sm:text-5xl text-accent ml-0.5 sm:ml-1 mb-0.5 sm:mb-1 leading-none">
           {stat.suffix}
         </span>
       </div>
 
-      {/* Label */}
-      <p className="text-white/50 text-sm uppercase tracking-[0.2em] mt-4 font-medium">
+      <p className="text-white/50 text-[11px] sm:text-sm uppercase tracking-[0.12em] sm:tracking-[0.2em] mt-2 sm:mt-4 font-medium leading-tight">
         {stat.label}
       </p>
     </motion.div>
@@ -62,14 +69,17 @@ export default function StatsCounter() {
   const stats = homepageData.stats;
 
   return (
-    <section className="py-28 bg-[#1E3A7B] overflow-hidden">
+    /*
+     * py-14 mobile → py-28 desktop (INVARIATO)
+     * Grid: sempre 3 colonne — i valori sono brevi, leggibili anche a 375px
+     */
+    <section className="py-14 md:py-28 bg-[#1E3A7B] overflow-hidden">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-3">
           {stats.map((stat, i) => (
             <div key={stat.label} className="relative">
-              {/* Separatore verticale semplice (non sull'ultimo) */}
               {i < stats.length - 1 && (
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block w-px h-16 bg-white/10" />
+                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 sm:h-16 bg-white/10" />
               )}
               <StatItem stat={stat} delay={i * 0.15} />
             </div>

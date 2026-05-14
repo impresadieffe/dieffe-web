@@ -40,6 +40,49 @@ body {
   color: #1A1A1A;
 }
 
+/* Evita scroll orizzontale su mobile */
+html {
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   === MOBILE REDESIGN TOKENS ===
+   Variabili usate dai componenti mobile per coerenza.
+   Attive solo sotto 768px per non impattare il desktop.
+   ============================================================ */
+@media (max-width: 767px) {
+  :root {
+    /* Spaziatura */
+    --m-container-padding: 20px;
+    --m-section-spacing: 56px;
+    --m-section-spacing-sm: 40px;
+    --m-title-margin-bottom: 16px;
+    --m-paragraph-margin-bottom: 12px;
+
+    /* Tipografia */
+    --m-h1-size: clamp(2.75rem, 11vw, 3.75rem); /* solo hero homepage */
+    --m-h1-internal: 28px;                       /* hero pagine interne */
+    --m-h2-section: 28px;                        /* titoli H2 sezioni */
+    --m-h3-card: 18px;
+    --m-body: 15px;
+    --m-small: 13px;
+    --m-eyebrow: 12px;
+
+    /* Bottoni */
+    --m-button-padding: 14px 24px;
+    --m-button-font: 15px;
+
+    /* Spaziatura uniforme dopo l'hero (PageHero) su tutte le pagine */
+    --m-after-hero-spacing: 64px;
+
+    /* Form — 16px obbligatorio per evitare zoom iOS Safari */
+    --m-input-font: 16px;
+
+    /* Bordi */
+    --m-radius: 12px;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -88,4 +131,15 @@ body {
   );
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
+}
+
+/*
+ * Riserva spazio all'immagine hero above-the-fold
+ * prevenendo Cumulative Layout Shift su mobile
+ */
+@media (max-width: 767px) {
+  .hero-image-wrapper {
+    aspect-ratio: 16 / 9;
+    min-height: 220px;
+  }
 }

@@ -12,7 +12,10 @@ export default function CTABanner() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section className="relative py-32 bg-[#1E3A7B] overflow-hidden">
+    /*
+     * py-16 mobile → py-32 desktop
+     */
+    <section className="relative py-16 md:py-32 bg-[#1E3A7B] overflow-hidden">
 
       {/* Blob accent/10 top-right */}
       <motion.div
@@ -55,7 +58,7 @@ export default function CTABanner() {
           transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
         >
           <motion.span
-            className="text-sm font-semibold uppercase tracking-widest text-accent"
+            className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-accent"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.15 }}
@@ -63,30 +66,35 @@ export default function CTABanner() {
             Inizia il tuo progetto
           </motion.span>
 
-          <h2 className="font-black text-5xl md:text-6xl text-white mt-4 leading-tight">
+          {/*
+           * Titolo: ~2rem mobile (≈32px), text-6xl desktop (invariato)
+           */}
+          <h2 className="font-black text-[2rem] md:text-6xl text-white mt-3 leading-tight">
             Hai un progetto<br className="hidden sm:block" /> in mente?
           </h2>
 
-          <p className="text-white/60 text-xl mt-6 max-w-2xl mx-auto leading-relaxed">
+          {/* Sottotitolo: text-base mobile → text-xl desktop */}
+          <p className="text-white/60 text-base md:text-xl mt-4 sm:mt-6 max-w-2xl mx-auto leading-relaxed">
             Contattaci per un sopralluogo gratuito e senza impegno.
             <br className="hidden sm:block" />
             Risposta garantita entro 24 ore.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-12 justify-center flex-wrap">
+          {/* Bottoni — padding ridotto su mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 sm:mt-12 justify-center flex-wrap">
             <Link
               href="/contatti"
-              className="inline-flex items-center gap-2 bg-[#00AEEF] hover:bg-[#0090c7] text-white rounded-full px-10 py-4 font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 bg-[#00AEEF] hover:bg-[#0090c7] text-white rounded-full px-7 py-3.5 sm:px-10 sm:py-4 font-semibold text-[15px] sm:text-base transition-colors duration-300"
             >
               Richiedi Preventivo Gratuito
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
 
             <Link
               href={`tel:${siteData.phone.replace(/\s/g, '')}`}
-              className="inline-flex items-center gap-2 border border-white/30 hover:border-white/60 text-white rounded-full px-10 py-4 font-semibold transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 border border-white/30 hover:border-white/60 text-white rounded-full px-7 py-3.5 sm:px-10 sm:py-4 font-semibold text-[15px] sm:text-base transition-colors duration-300"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
               Chiamaci ora
             </Link>
           </div>

@@ -19,7 +19,7 @@ export default function ContattiPage() {
         backgroundImage="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80"
       />
 
-      <section className="bg-background py-24">
+      <section className="bg-background py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <ContactInfo />

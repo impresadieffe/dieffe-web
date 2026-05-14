@@ -90,19 +90,19 @@ export default function ProcessSection() {
   const animated = inView ? 'visible' : 'hidden';
 
   return (
-    <section className="bg-[#1E3A7B] py-24">
-      <div className="max-w-6xl mx-auto px-8">
+    <section className="bg-[#1E3A7B] py-14 md:py-24">
+      <div className="max-w-6xl mx-auto px-5 md:px-8">
 
         {/* Titolo */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <span className="text-[#00AEEF] text-xs uppercase tracking-widest font-semibold">
             Come Lavoriamo
           </span>
-          <h2 className="font-black text-5xl text-white mt-3">
+          <h2 className="font-black text-[1.875rem] md:text-5xl text-white mt-3 leading-[1.15] md:leading-none">
             Il nostro processo
           </h2>
           <div className="w-10 h-[3px] bg-[#00AEEF] rounded-full mx-auto mt-5" />
-          <p className="text-white/50 mt-4 text-lg">
+          <p className="text-white/50 mt-4 text-[15px] md:text-lg">
             4 semplici passi per trasformare il tuo spazio
           </p>
         </div>

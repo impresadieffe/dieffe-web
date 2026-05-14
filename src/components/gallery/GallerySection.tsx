@@ -9,17 +9,14 @@ import Badge from '@/components/ui/Badge';
 import Lightbox from '@/components/gallery/Lightbox';
 import galleryData from '@/data/gallery.json';
 
-// Aspect ratio dimensions for masonry variety (width/height approach, not fill)
 const DIMS = [
-  { width: 800, height: 600 }, // 4:3 — landscape
-  { width: 600, height: 800 }, // 3:4 — portrait
-  { width: 800, height: 800 }, // 1:1 — square
+  { width: 800, height: 600 },
+  { width: 600, height: 800 },
+  { width: 800, height: 800 },
 ] as const;
 
 const ALL_LABEL = 'Tutti';
-
 const CATEGORY_ORDER = ['Tetti', 'Facciate', 'Ristrutturazioni', 'Interni', 'Esterni'];
-
 const CATEGORIES = [
   ALL_LABEL,
   ...CATEGORY_ORDER.filter((cat) => galleryData.some((item) => item.category === cat)),
@@ -35,10 +32,18 @@ export default function GallerySection() {
       : galleryData.filter((item) => item.category === activeFilter);
 
   return (
-    <section className="bg-background py-24">
+    /*
+     * py-12 mobile → py-24 desktop (INVARIATO)
+     */
+    <section className="bg-background py-16 md:py-24">
       <Container>
-        {/* Filter pills */}
-        <div className="flex flex-wrap gap-3 justify-center mb-14">
+
+        {/* ─── Filtri categoria ─── */}
+        {/*
+         * Gap e padding pill ridotti su mobile per evitare overflow orizzontale
+         * Scroll orizzontale abilitato su mobile se le pill non ci stanno
+         */}
+        <div className="flex flex-wrap gap-2 sm:gap-3 justify-center mb-8 md:mb-14">
           {CATEGORIES.map((cat) => {
             const isActive = activeFilter === cat;
             return (
@@ -46,7 +51,7 @@ export default function GallerySection() {
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 className={[
-                  'px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200',
+                  'px-4 py-2 sm:px-5 rounded-full text-[13px] sm:text-sm font-semibold transition-all duration-200 min-h-[40px]',
                   isActive
                     ? 'bg-accent text-white shadow-md'
                     : 'bg-white text-gray-600 border border-gray-200 hover:border-accent hover:text-accent',
@@ -58,11 +63,17 @@ export default function GallerySection() {
           })}
         </div>
 
-        {/* Masonry grid */}
+        {/* ─── Griglia masonry ─── */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeFilter}
-            className="columns-1 sm:columns-2 lg:columns-3 gap-6"
+            /*
+             * Colonne:
+             *   mobile  — 1 colonna, gap 4
+             *   sm 640px — 2 colonne, gap 5
+             *   lg 1024px — 3 colonne, gap 6 (DESKTOP — invariato)
+             */
+            className="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-5 lg:gap-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -74,16 +85,16 @@ export default function GallerySection() {
               return (
                 <motion.div
                   key={item.id}
-                  className="break-inside-avoid mb-6"
+                  className="break-inside-avoid mb-4 sm:mb-5 lg:mb-6"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: i * 0.05, ease: 'easeOut' }}
+                  transition={{ duration: 0.4, delay: i * 0.04, ease: 'easeOut' }}
                 >
                   <div
-                    className="relative group cursor-pointer rounded-2xl overflow-hidden"
+                    className="relative group cursor-pointer rounded-xl sm:rounded-2xl overflow-hidden"
                     onClick={() => setLightboxIndex(i)}
                   >
-                    {/* Image */}
+                    {/* Immagine — aspect-ratio fissato dalle dimensioni → no CLS */}
                     <Image
                       src={item.imageUrl}
                       alt={item.title}
@@ -93,24 +104,24 @@ export default function GallerySection() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
 
-                    {/* Hover overlay */}
+                    {/* Overlay hover — solo su dispositivi con hover (desktop) */}
                     <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col p-4">
-                      {/* Category badge — top left */}
                       <div className="flex-shrink-0">
                         <Badge color="accent">{item.category}</Badge>
                       </div>
-
-                      {/* Zoom icon — centered */}
                       <div className="flex-1 flex items-center justify-center">
                         <ZoomIn size={36} className="text-white drop-shadow" />
                       </div>
-
-                      {/* Title — bottom */}
                       <div className="flex-shrink-0">
                         <h3 className="text-white font-bold text-sm leading-tight">
                           {item.title}
                         </h3>
                       </div>
+                    </div>
+
+                    {/* Label categoria su mobile (visible sempre, no hover) */}
+                    <div className="sm:hidden absolute top-3 left-3">
+                      <Badge color="accent">{item.category}</Badge>
                     </div>
                   </div>
                 </motion.div>
@@ -118,9 +129,9 @@ export default function GallerySection() {
             })}
           </motion.div>
         </AnimatePresence>
+
       </Container>
 
-      {/* Lightbox */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <Lightbox
