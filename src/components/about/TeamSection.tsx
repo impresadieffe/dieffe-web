@@ -24,17 +24,11 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
     >
       <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)] hover:scale-[1.02] transition-all duration-400 ease-out h-full flex flex-col">
 
-        {/* Header scuro */}
-        <div className="relative bg-[#1E3A7B] p-8 text-center overflow-hidden flex-shrink-0">
-          <div
-            className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-accent/20 blur-2xl pointer-events-none"
-            aria-hidden="true"
-          />
-          <div
-            className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-white/5 blur-xl pointer-events-none"
-            aria-hidden="true"
-          />
-          <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border-4 border-white/20 shadow-lg z-10">
+        {/* Header — sfondo blu con foto circolare centrata */}
+        <div className="relative bg-[#1E3A7B] h-48 flex items-center justify-center flex-shrink-0 overflow-hidden">
+          <div className="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-accent/20 blur-2xl pointer-events-none" aria-hidden="true" />
+          <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-white/5 blur-xl pointer-events-none" aria-hidden="true" />
+          <div className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-white/20 shadow-xl z-10">
             <Image
               src={member.imageUrl}
               alt={member.name}
@@ -44,9 +38,9 @@ function TeamCard({ member, index }: { member: TeamMember; index: number }) {
           </div>
         </div>
 
-        {/* Body */}
+        {/* Body — nome, ruolo, bio */}
         <div className="p-6 text-center flex flex-col flex-grow">
-          <h3 className="font-black text-xl text-primary">
+          <h3 className="font-black text-xl text-primary leading-tight">
             {member.name}
           </h3>
           <p className="text-accent text-sm font-semibold uppercase tracking-wide mt-1">

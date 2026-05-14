@@ -2,7 +2,6 @@ import { type Metadata } from 'next';
 import PageHero from '@/components/ui/PageHero';
 import StorySection from '@/components/about/StorySection';
 import ValuesGrid from '@/components/about/ValuesGrid';
-import TeamSection from '@/components/about/TeamSection';
 import CTABanner from '@/components/home/CTABanner';
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function ChiSiamoPage() {
       />
       <StorySection />
       <ValuesGrid />
-      <TeamSection />
       <CTABanner />
     </>
   );

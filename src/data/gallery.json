@@ -1,98 +1,378 @@
 [
   {
     "id": 1,
-    "title": "Bagno moderno in marmo bianco",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
-    "description": "Ristrutturazione completa di un bagno padronale con rivestimenti in marmo bianco Carrara, box doccia walk-in e sanitari sospesi.",
+    "title": "Autocarro con gru per lavori edili in centro città",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni01.jpg",
+    "description": "Autocarro con gru per lavori edili in centro città.",
     "featured": true
   },
   {
     "id": 2,
-    "title": "Cucina open space in stile industriale",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
-    "description": "Realizzazione di una cucina open space con top in pietra grigia, isola centrale e pavimento in gres effetto cemento.",
+    "title": "Posa pavimentazione esterna in autobloccanti",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni02.jpg",
+    "description": "Posa pavimentazione esterna in autobloccanti.",
     "featured": true
   },
   {
     "id": 3,
-    "title": "Pavimento in parquet rovere naturale",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=800&q=80",
-    "description": "Posa di parquet in rovere massello a spina di pesce in soggiorno e zona pranzo, con finitura ad olio naturale.",
+    "title": "Isolamento termico a soffitto con pannelli coibentanti",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni03.jpg",
+    "description": "Isolamento termico a soffitto con pannelli coibentanti.",
     "featured": true
   },
   {
     "id": 4,
-    "title": "Bagno con doccia a filo pavimento",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1620626011761-996317702519?w=800&q=80",
-    "description": "Bagno secondario rinnovato con doccia a filo, piastrelle formato maxi 120x120 e lavabo da incasso.",
+    "title": "Ingresso abitazione con rivestimento in mattoni faccia a vista",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni04.jpg",
+    "description": "Ingresso abitazione con rivestimento in mattoni faccia a vista.",
     "featured": false
   },
   {
     "id": 5,
-    "title": "Facciata esterna riqualificata",
-    "category": "Facciate",
-    "imageUrl": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=800&q=80",
-    "description": "Risanamento e tinteggiatura di facciata condominiale con intonaco al silossano, cappotto termico e nuove grondaie.",
+    "title": "Intervento con gru per movimentazione materiali in quota",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni05.jpg",
+    "description": "Intervento con gru per movimentazione materiali in quota.",
     "featured": false
   },
   {
     "id": 6,
-    "title": "Appartamento ristrutturato chiavi in mano",
-    "category": "Ristrutturazioni",
-    "imageUrl": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80",
-    "description": "Ristrutturazione totale di appartamento anni '70: nuovi impianti, parquet, tinteggiatura e cucina su misura.",
+    "title": "Rifacimento cortile esterno con nuova pavimentazione drenante",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni06.jpg",
+    "description": "Rifacimento cortile esterno con nuova pavimentazione drenante.",
     "featured": false
   },
   {
     "id": 7,
-    "title": "Cucina classica in legno massello",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
-    "description": "Installazione di cucina classica in legno di ciliegio con top in granito nero e pavimento in cotto.",
+    "title": "Intervento con autocarro gru per lavori in villa privata",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni07.jpg",
+    "description": "Intervento con autocarro gru per lavori in villa privata.",
     "featured": false
   },
   {
     "id": 8,
-    "title": "Rifacimento tetto con tegole in cotto",
-    "category": "Tetti",
-    "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
-    "description": "Smontaggio del vecchio manto di copertura e posa di tegole in cotto con guaina impermeabilizzante sottostante.",
+    "title": "Sollevamento materiali edili con gru su autocarro",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni08.jpg",
+    "description": "Sollevamento materiali edili con gru su autocarro.",
     "featured": false
   },
   {
     "id": 9,
-    "title": "Terrazzo e balcone riqualificato",
+    "title": "Realizzazione copertura in legno con tegole portoghesi",
     "category": "Esterni",
-    "imageUrl": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-    "description": "Posa di pavimento in grès anti-scivolo su terrazzo, impermeabilizzazione e nuova ringhiera in acciaio inox.",
+    "imageUrl": "/images/galleria/esterni/esterni09.jpg",
+    "description": "Realizzazione copertura in legno con tegole portoghesi.",
     "featured": false
   },
   {
     "id": 10,
-    "title": "Villa unifamiliare — ristrutturazione totale",
-    "category": "Ristrutturazioni",
-    "imageUrl": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=800&q=80",
-    "description": "Ristrutturazione completa di villa bifamiliare a Moncalieri: nuovi impianti, cappotto, infissi e finiture di pregio.",
+    "title": "Pavimentazione esterna moderna effetto pietra naturale",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni11.jpg",
+    "description": "Pavimentazione esterna moderna effetto pietra naturale.",
     "featured": false
   },
   {
     "id": 11,
-    "title": "Bagno in stile spa con vasca freestanding",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
-    "description": "Bagno padronale con vasca freestanding oval, rivestimento in microcemento bianco e illuminazione LED integrata.",
+    "title": "Restauro muro perimetrale con finitura elegante bicolore",
+    "category": "Esterni",
+    "imageUrl": "/images/galleria/esterni/esterni12.jpg",
+    "description": "Restauro muro perimetrale con finitura elegante bicolore.",
     "featured": false
   },
   {
     "id": 12,
-    "title": "Scala interna con rivestimento in pietra",
-    "category": "Interni",
-    "imageUrl": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?w=800&q=80",
-    "description": "Rivestimento di scala interna con gradini in pietra serena levigata e corrimano in ferro battuto su misura.",
+    "title": "Rifacimento facciata esterna con finitura color rosso mattone",
+    "category": "Facciate",
+    "imageUrl": "/images/galleria/facciate/facciate01.jpg",
+    "description": "Rifacimento facciata esterna con finitura color rosso mattone.",
     "featured": false
-  }
+  },
+  {
+    "id": 13,
+    "title": "Realizzazione cappotto termico su facciata con pannelli isolanti",
+    "category": "Facciate",
+    "imageUrl": "/images/galleria/facciate/facciate02.jpg",
+    "description": "Realizzazione cappotto termico su facciata con pannelli isolanti.",
+    "featured": false
+  },
+  {
+    "id": 14,
+    "title": "Ristrutturazione facciata condominiale con balconi e finiture moderne",
+    "category": "Facciate",
+    "imageUrl": "/images/galleria/facciate/facciate03.jpg",
+    "description": "Ristrutturazione facciata condominiale con balconi e finiture moderne.",
+    "featured": false
+  },
+  {
+    "id": 15,
+    "title": "Cappotto termico esterno in fase di posa su ponteggio",
+    "category": "Facciate",
+    "imageUrl": "/images/galleria/facciate/facciate04.jpg",
+    "description": "Cappotto termico esterno in fase di posa su ponteggio.",
+    "featured": false
+  },
+  {
+    "id": 16,
+    "title": "Fissaggio pannelli isolanti per cappotto termico di facciata",
+    "category": "Facciate",
+    "imageUrl": "/images/galleria/facciate/facciate05.jpg",
+    "description": "Fissaggio pannelli isolanti per cappotto termico di facciata.",
+    "featured": false
+  },
+  {
+    "id": 17,
+    "title": "Bagno moderno con arredo su misura e rivestimenti",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni01.jpg",
+    "description": "Bagno moderno con arredo su misura e rivestimenti.",
+    "featured": false
+  },
+  {
+    "id": 18,
+    "title": "Posa di pavimento effetto legno e rivestimento cucina",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni02.jpg",
+    "description": "Posa di pavimento effetto legno e rivestimento cucina.",
+    "featured": false
+  },
+  {
+    "id": 19,
+    "title": "Rifacimento bagno",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni03.jpg",
+    "description": "Rifacimento bagno.",
+    "featured": false
+  },
+  {
+    "id": 20,
+    "title": "Zona living ristrutturata con pavimento effetto pietra e controsoffitto",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni04.jpg",
+    "description": "Zona living ristrutturata con pavimento effetto pietra e controsoffitto.",
+    "featured": false
+  },
+  {
+    "id": 21,
+    "title": "Ristrutturazione interna con vespaio aerato e preparazione sottofondo",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni05.jpg",
+    "description": "Ristrutturazione interna con vespaio aerato e preparazione sottofondo.",
+    "featured": false
+  },
+  {
+    "id": 22,
+    "title": "Controsoffitto moderno con illuminazione LED",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni06.jpg",
+    "description": "Controsoffitto moderno con illuminazione LED.",
+    "featured": false
+  },
+  {
+    "id": 23,
+    "title": "Ambiente ristrutturato con pavimento effetto rovere",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni07.jpg",
+    "description": "Ambiente ristrutturato con pavimento effetto rovere.",
+    "featured": false
+  },
+  {
+    "id": 24,
+    "title": "Cabina armadio moderna su misura con pavimento a spina ungherese",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni08.jpg",
+    "description": "Cabina armadio moderna su misura con pavimento a spina ungherese.",
+    "featured": false
+  },
+  {
+    "id": 25,
+    "title": "Bagno moderno con rivestimenti bianchi e dettagli verde petrolio",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni09.jpg",
+    "description": "Bagno moderno con rivestimenti bianchi e dettagli verde petrolio.",
+    "featured": false
+  },
+  {
+    "id": 26,
+    "title": "Cucina open space moderna",
+    "category": "Interni",
+    "imageUrl": "/images/galleria/interni/interni10.jpg",
+    "description": "Cucina open space moderna.",
+    "featured": false
+   },
+   {
+     "id": 27,
+     "title": "Demolizione interna con mini escavatore per ristrutturazione completa",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni11.jpg",
+     "description": "Demolizione interna con mini escavatore per ristrutturazione completa.",
+     "featured": false
+   },
+   {
+     "id": 28,
+     "title": "Doccia in fase di realizzazione con rivestimento effetto marmo",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni12.jpg",
+     "description": "Doccia in fase di realizzazione con rivestimento effetto marmo.",
+     "featured": false
+   },
+   {
+     "id": 29,
+     "title": "Parete attrezzata in cartongesso con nicchie illuminate a LED",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni13.jpg",
+     "description": "Parete attrezzata in cartongesso con nicchie illuminate a LED.",
+     "featured": false
+   },
+   {
+     "id": 30,
+     "title": "Bagno moderno con vasca, sanitari sospesi e rivestimenti effetto pietra",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni14.jpg",
+     "description": "Bagno moderno con vasca, sanitari sospesi e rivestimenti effetto pietra.",
+     "featured": false
+   },
+   {
+     "id": 31,
+     "title": "Appartamento ristrutturato con nuovi finiture e impianti",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni15.jpg",
+     "description": "Appartamento ristrutturato con nuovi finiture e impianti.",
+     "featured": false
+   },
+   {
+     "id": 32,
+     "title": "Zona living moderna con parete decorativa e pavimento effetto marmo",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni16.jpg",
+     "description": "Zona living moderna con parete decorativa e pavimento effetto marmo.",
+     "featured": false
+   },
+   {
+     "id": 33,
+     "title": "Ristrutturazione appartamento",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni17.jpg",
+     "description": "Ristrutturazione appartamento.",
+     "featured": false
+   },
+   {
+     "id": 34,
+     "title": "Soggiorno moderno con illuminazione a incasso e pavimento nero lucido",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni18.jpg",
+     "description": "Soggiorno moderno con illuminazione a incasso e pavimento nero lucido.",
+     "featured": false
+   },
+   {
+     "id": 35,
+     "title": "Bagno elegante con doccia in vetro e rivestimenti effetto marmo",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni19.jpg",
+     "description": "Bagno elegante con doccia in vetro e rivestimenti effetto marmo.",
+     "featured": false
+   },
+   {
+     "id": 36,
+     "title": "Posa di pavimento finto legno in gres porcellanato",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni20.jpg",
+     "description": "Posa di pavimento finto legno in gres porcellanato.",
+     "featured": false
+   },
+   {
+     "id": 37,
+     "title": "Ristrutturazione completa di un appartamento con nuove finiture e impianti",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni21.jpg",
+     "description": "Ristrutturazione completa di un appartamento con nuove finiture e impianti.",
+     "featured": false
+   },
+   {
+     "id": 38,
+     "title": "Posa di palchetto a spina ungherese",
+     "category": "Interni",
+     "imageUrl": "/images/galleria/interni/interni22.jpg",
+     "description": "Posa di palchetto a spina ungherese.",
+     "featured": false
+   },
+   {
+     "id": 39,
+     "title": "Realizzazione tetto in legno lamellare con travi a vista",
+     "category": "Tetti",
+     "imageUrl": "/images/galleria/tetti/tetto01.jpg",
+     "description": "Realizzazione tetto in legno lamellare con travi a vista.",
+     "featured": false
+   },
+   {
+     "id": 40,
+     "title": "Struttura portante in legno per nuovo rifacimento tetto",
+     "category": "Tetti",
+     "imageUrl": "/images/galleria/tetti/tetto02.jpg",
+     "description": "Struttura portante in legno per nuovo rifacimento tetto.",
+     "featured": false
+   },
+    {
+      "id": 41,
+      "title": "Copertura con tegole portoghesi e finiture tradizionali",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto03.jpg",
+      "description": "Copertura con tegole portoghesi e finiture tradizionali.",
+      "featured": false
+    },
+    {
+      "id": 42,
+      "title": "Rifacimento completo copertura con manto in tegole",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto04.jpg",
+      "description": "Rifacimento completo copertura con manto in tegole.",
+      "featured": false
+    },
+    {
+      "id": 43,
+      "title": "Lattoneria e nuova copertura in legno",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto05.jpg",
+      "description": "Lattoneria e nuova copertura in legno.",
+      "featured": false
+    },
+    {
+      "id": 44,
+      "title": "Rifacimento tetto con posa tegole",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto06.jpg",
+      "description": "Rifacimento tetto con posa tegole.",
+      "featured": false
+    },
+    {
+      "id": 45,
+      "title": "Rifacimento lattoneria e manto di copertura",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto07.jpg",
+      "description": "Rifacimento lattoneria e manto di copertura.",
+      "featured": false
+    },
+    {
+      "id": 46,
+      "title": "Rifacimento tetto rustico con copertura in coppi",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto08.jpg",
+      "description": "Rifacimento tetto rustico con copertura in coppi.",
+      "featured": false
+    },
+    {
+      "id": 47,
+      "title": "Copertura completa con tegole, colmo ventilato e lucernari",
+      "category": "Tetti",
+      "imageUrl": "/images/galleria/tetti/tetto09.jpg",
+      "description": "Copertura completa con tegole, colmo ventilato e lucernari.",
+      "featured": false
+    }
 ]

@@ -12,7 +12,7 @@
       "Tegole, coppi e lamiere per ogni stile architettonico"
     ],
     "icon": "Home",
-    "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&q=80",
+    "imageUrl": "/images/serivizi/tetti01.JPG",
     "order": 1,
     "active": true
   },
@@ -29,7 +29,7 @@
       "Consulenza detrazioni fiscali Ecobonus e Bonus 110%"
     ],
     "icon": "Building2",
-    "imageUrl": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+    "imageUrl": "/images/serivizi/facciate-cappotti.JPG",
     "order": 2,
     "active": true
   },
@@ -46,7 +46,7 @@
       "Consegna chiavi in mano con garanzia post-lavori"
     ],
     "icon": "Hammer",
-    "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    "imageUrl": "/images/serivizi/ristrutturazioni-complete.JPG",
     "order": 3,
     "active": true
   },
@@ -63,7 +63,7 @@
       "Gestione completa del processo costruttivo"
     ],
     "icon": "Building",
-    "imageUrl": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80",
+    "imageUrl": "/images/serivizi/costruzioni.JPG",
     "order": 4,
     "active": true
   },
@@ -80,7 +80,7 @@
       "Riduzione significativa delle emissioni di CO₂"
     ],
     "icon": "Leaf",
-    "imageUrl": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80",
+    "imageUrl": "/images/serivizi/bioedilizia.JPG",
     "order": 5,
     "active": true
   },
@@ -97,7 +97,7 @@
       "Adeguamento e rifacimento impianti esistenti"
     ],
     "icon": "Zap",
-    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    "imageUrl": "/images/serivizi/impianti_elettrici_e_idraulici.JPG",
     "order": 6,
     "active": true
   }

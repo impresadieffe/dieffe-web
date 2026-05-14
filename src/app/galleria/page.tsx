@@ -14,7 +14,7 @@ export default function GalleriaPage() {
       <PageHero
         title="I Nostri Lavori"
         subtitle="Ogni progetto racconta una storia di qualità"
-        backgroundImage="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80"
+        backgroundImage="/images/hero/sezioneinostrilavori.jpg"
       />
       <GallerySection />
     </>

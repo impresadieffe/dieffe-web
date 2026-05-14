@@ -26,7 +26,7 @@ export default function HeroSection() {
         {/* Background image — very dark, almost a texture */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80"
+            src="/images/hero/hero_01.JPG"
             alt=""
             fill
             className="object-cover opacity-50"
@@ -179,34 +179,16 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator — centrato, mouse SVG + frecce cascade */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2" aria-hidden="true">
-        <span className="text-white/40 text-xs uppercase tracking-[0.3em] font-medium">
-          Scorri
-        </span>
-
-        {/* Mouse SVG animato */}
-        <div className="relative w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center pt-1.5">
-          <motion.div
-            className="w-1 h-2 bg-white/60 rounded-full"
-            animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
-          />
-        </div>
-
-        {/* Frecce cascade */}
-        <div className="flex flex-col items-center">
-          {[0, 1, 2].map((i) => (
-            <motion.div
-              key={i}
-              animate={{ opacity: [0, 1, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2, ease: 'easeInOut' }}
-            >
-              <ChevronDown className="w-3 h-3 text-white/40" />
-            </motion.div>
-          ))}
-        </div>
-      </div>
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center"
+        aria-hidden="true"
+        animate={{ y: [0, 6, 0] }}
+        transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        <ChevronDown className="w-5 h-5 text-white/40 -mb-2" />
+        <ChevronDown className="w-5 h-5 text-white/20" />
+      </motion.div>
 
     </section>
   );

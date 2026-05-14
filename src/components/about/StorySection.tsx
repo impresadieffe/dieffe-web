@@ -89,7 +89,7 @@ export default function StorySection() {
                 style={{ aspectRatio: '3/4' }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80"
+                  src="/images/team/chi-siamo01.JPG"
                   alt="Team Dieffe Ristrutturazioni al lavoro"
                   fill
                   className="object-cover"
@@ -101,9 +101,10 @@ export default function StorySection() {
                 className="absolute bottom-8 -left-5 z-10
                            bg-white rounded-2xl p-6 shadow-2xl border-l-4 border-accent
                            min-w-[180px]"
-                initial={{ opacity: 0, y: 16, x: -8 }}
-                animate={rightInView ? { opacity: 1, y: 0, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
+                initial={{ opacity: 0, x: -8 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
               >
                 <div className="font-black text-4xl text-primary leading-none">
                   500+

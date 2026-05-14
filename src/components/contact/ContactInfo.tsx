@@ -5,7 +5,7 @@ const mapsQuery = encodeURIComponent(siteData.address);
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${mapsQuery}`;
 const waHref = `https://wa.me/${siteData.whatsapp}`;
 const mapsEmbed =
-  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.5!2d7.6868!3d44.9997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDU5JzU5LjkiTiA3wrA0MSc3Mi40IkU!5e0!3m2!1sit!2sit!4v1234567890';
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2821.6829530699342!2d7.658999276622426!3d44.99075137107014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4788126c21cf4db3%3A0x99304adcffd8ea75!2sVia%20Vincenzo%20Gioberti%2C%2017%2C%2010042%20Nichelino%20TO!5e0!3m2!1sit!2sit!4v1778528223448!5m2!1sit!2sit';
 
 const INFO_CARDS = [
   {

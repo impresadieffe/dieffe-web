@@ -10,7 +10,21 @@ import Container from '@/components/ui/Container';
 import { cn } from '@/lib/utils';
 import galleryData from '@/data/gallery.json';
 
-const featured = galleryData.filter((g) => g.featured).slice(0, 3);
+// Computed once at module load — stable within a build/hydration cycle, rotates daily
+const dailySeed = Math.floor(Date.now() / 86400000);
+
+const categoryMap = galleryData.reduce<Record<string, typeof galleryData>>(
+  (acc, item) => {
+    if (!acc[item.category]) acc[item.category] = [];
+    acc[item.category].push(item);
+    return acc;
+  },
+  {}
+);
+
+const featured = Object.entries(categoryMap)
+  .slice(0, 3)
+  .map(([, items], i) => items[(dailySeed + i) % items.length]);
 
 interface GalleryItem {
   id: number;
