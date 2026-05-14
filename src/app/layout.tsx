@@ -39,13 +39,28 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Dieffe Ristrutturazioni" }],
   openGraph: {
-    type: "website",
-    locale: "it_IT",
+    title: "Dieffe Ristrutturazioni",
+    description:
+      "Impresa edile a Nichelino, Torino e provincia. Rifacimento tetti, facciate, cappotti termici e ristrutturazioni complete dal 2013.",
+    url: "https://www.impresadieffe.it",
     siteName: "Dieffe Ristrutturazioni",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "Dieffe Ristrutturazioni" }],
+    images: [
+      {
+        url: "https://www.impresadieffe.it/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Dieffe Ristrutturazioni - Impresa Edile Torino",
+      },
+    ],
+    locale: "it_IT",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Dieffe Ristrutturazioni",
+    description:
+      "Impresa edile a Nichelino, Torino e provincia. Rifacimento tetti, facciate, cappotti termici e ristrutturazioni complete dal 2013.",
+    images: ["https://www.impresadieffe.it/images/og-image.png"],
   },
   robots: {
     index: true,
