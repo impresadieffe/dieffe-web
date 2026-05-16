@@ -62,12 +62,15 @@ export const metadata: Metadata = {
       "Impresa edile a Nichelino, Torino e provincia. Rifacimento tetti, facciate, cappotti termici e ristrutturazioni complete dal 2013.",
     images: ["https://www.impresadieffe.it/images/og-image.png"],
   },
+  alternates: {
+    canonical: "https://www.impresadieffe.it",
+  },
   robots: {
     index: true,
     follow: true,
   },
   verification: {
-    google: "INSERISCI_QUI_CODICE_GOOGLE_SEARCH_CONSOLE",
+    google: "to-LDt3yLPsV-NYK1WrW7qQMH8v27VmaI9eBTRT3RFI",
   },
   icons: {
     icon: "/icona_dieffe.svg",
