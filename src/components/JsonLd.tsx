@@ -2,11 +2,11 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Dieffe Ristrutturazioni',
-  legalName: 'DIEFFE DI FARO DANIELA',
+  legalName: 'DIEFFE RISTRUTTURAZIONI di Addamo Andrea',
   url: 'https://www.impresadieffe.it',
   telephone: '+393493191144',
   email: 'impresa.dieffe@gmail.com',
-  vatID: '10908150013',
+  vatID: '13460330015',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Via Vincenzo Gioberti 17',

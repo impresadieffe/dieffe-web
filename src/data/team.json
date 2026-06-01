@@ -1,15 +1,8 @@
 [
   {
-    "id": 1,
-    "name": "Daniela Faro",
-    "role": "Titolare & Responsabile Amministrativa",
-    "bio": "Fondatrice di Dieffe Ristrutturazioni, Daniela porta in azienda una solida esperienza nel management e nell'organizzazione aziendale. Coordina le attività commerciali e amministrative, gestisce i rapporti con clienti e fornitori e garantisce che ogni progetto rispetti tempi, budget e aspettative.",
-    "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
-  },
-  {
     "id": 2,
     "name": "Andrea Addamo",
-    "role": "Responsabile Lavori & Capo Cantiere",
+    "role": "Titolare & Responsabile Lavori",
     "bio": "Con quasi 30 anni di esperienza nel settore edile, Andrea è la colonna tecnica di Dieffe. Dirige i lavori sul campo, gestisce le maestranze con autorevolezza e passione, offre consulenza tecnica ai clienti e supervisiona ogni cantiere dalla prima pietra alla consegna finale.",
     "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80"
   },

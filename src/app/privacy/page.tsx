@@ -19,9 +19,9 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-lg font-bold text-[#1E3A7B] mb-3">1. Titolare del Trattamento</h2>
             <p>
-              Il Titolare del trattamento dei dati personali è <strong className="text-gray-800">DIEFFE DI FARO DANIELA</strong>,
-              nella persona di Daniela Faro, con sede legale in Via Vincenzo Gioberti 17, 10042 Nichelino (TO),
-              P.IVA 10908150013.
+              Il Titolare del trattamento dei dati personali è <strong className="text-gray-800">DIEFFE RISTRUTTURAZIONI di Addamo Andrea</strong>,
+              nella persona di Andrea Addamo, con sede legale in Via Vincenzo Gioberti 17, 10042 Nichelino (TO),
+              P.IVA 13460330015.
             </p>
             <p className="mt-2">
               È possibile contattare il Titolare ai seguenti recapiti:
@@ -180,7 +180,7 @@ export default function PrivacyPage() {
               Tutti i contenuti presenti sul sito web <strong className="text-gray-800">www.impresadieffe.it</strong> —
               inclusi a titolo esemplificativo testi, immagini, fotografie, loghi, grafiche, codice sorgente
               e materiale multimediale — sono di proprietà esclusiva di{' '}
-              <strong className="text-gray-800">DIEFFE DI FARO DANIELA</strong> e sono protetti dalle vigenti norme
+              <strong className="text-gray-800">DIEFFE RISTRUTTURAZIONI di Addamo Andrea</strong> e sono protetti dalle vigenti norme
               in materia di diritto d&apos;autore e proprietà intellettuale.
             </p>
             <p className="mt-2">
